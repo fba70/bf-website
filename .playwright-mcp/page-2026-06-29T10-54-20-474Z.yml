@@ -1,0 +1,105 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e2]:
+    - generic [ref=e4]:
+      - img [ref=e7]
+      - generic [ref=e9]:
+        - heading "LinkedIn respects your privacy" [level=2] [ref=e10]
+        - generic [ref=e12]:
+          - paragraph [ref=e13]:
+            - text: LinkedIn and 3rd parties use essential and non-essential cookies to provide, secure, analyze and improve our Services, and to show you relevant ads (including professional and job ads) on and off LinkedIn. Learn more in our
+            - link "Cookie Policy" [ref=e14] [cursor=pointer]:
+              - /url: https://www.linkedin.com/legal/cookie-policy
+            - text: .
+          - paragraph [ref=e15]:
+            - text: Select Accept to consent or Reject to decline non-essential cookies for this use. You can update your choices at any time in your
+            - link "settings" [ref=e16] [cursor=pointer]:
+              - /url: https://www.linkedin.com/mypreferences/g/guest-cookies
+            - text: .
+        - generic [ref=e17]:
+          - button "Accept" [ref=e18] [cursor=pointer]
+          - button "Reject" [ref=e19] [cursor=pointer]
+  - generic [ref=e20]:
+    - link "Skip to main content" [ref=e21] [cursor=pointer]:
+      - /url: "#main-content"
+    - banner [ref=e22]:
+      - navigation "Primary" [ref=e23]:
+        - link "LinkedIn" [ref=e24] [cursor=pointer]:
+          - /url: /?trk=seo-authwall-base_nav-header-logo
+          - generic [ref=e25]: LinkedIn
+          - img [ref=e27]
+    - main [ref=e38]:
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - heading "Join LinkedIn" [level=1] [ref=e41]
+          - generic [ref=e42]:
+            - generic [ref=e43]:
+              - generic [ref=e44]:
+                - textbox "Email" [ref=e45]:
+                  - /placeholder: " "
+                - generic: Email
+              - generic [ref=e46]:
+                - textbox "Password (6+ characters)" [ref=e47]:
+                  - /placeholder: " "
+                - generic: Password (6+ characters)
+            - paragraph [ref=e48]:
+              - text: By clicking Agree & Join, you agree to the LinkedIn
+              - link "User Agreement" [ref=e49] [cursor=pointer]:
+                - /url: https://www.linkedin.com/legal/user-agreement?trk=seo-authwall-base_join-form-user-agreement
+              - text: ","
+              - link "Privacy Policy" [ref=e50] [cursor=pointer]:
+                - /url: https://www.linkedin.com/legal/privacy-policy?trk=seo-authwall-base_join-form-privacy-policy
+              - text: ", and"
+              - link "Cookie Policy" [ref=e51] [cursor=pointer]:
+                - /url: https://www.linkedin.com/legal/cookie-policy?trk=seo-authwall-base_join-form-cookie-policy
+              - text: .
+            - button "Agree & Join" [ref=e52] [cursor=pointer]
+            - generic [ref=e53]:
+              - generic [ref=e57]: or
+              - button "Continue with google" [ref=e58]:
+                - generic [ref=e59]:
+                  - button "Continue with Google" [ref=e61] [cursor=pointer]:
+                    - generic [ref=e63]:
+                      - img [ref=e65]
+                      - generic [ref=e72]: Continue with Google
+                  - iframe
+          - paragraph [ref=e73]:
+            - text: Already on Linkedin?
+            - button "Sign in" [ref=e74]
+        - button [ref=e76]
+    - contentinfo [ref=e77]:
+      - list [ref=e78]:
+        - listitem [ref=e79]:
+          - generic [ref=e80]: LinkedIn
+          - img [ref=e82]
+          - generic [ref=e85]: © 2026
+        - listitem [ref=e86]:
+          - link "About" [ref=e87] [cursor=pointer]:
+            - /url: https://about.linkedin.com?trk=seo-authwall-base_footer-about
+        - listitem [ref=e88]:
+          - link "Accessibility" [ref=e89] [cursor=pointer]:
+            - /url: https://www.linkedin.com/accessibility?trk=seo-authwall-base_footer-accessibility
+        - listitem [ref=e90]:
+          - link "User Agreement" [ref=e91] [cursor=pointer]:
+            - /url: https://www.linkedin.com/legal/user-agreement?trk=seo-authwall-base_footer-user-agreement
+        - listitem [ref=e92]:
+          - link "Privacy Policy" [ref=e93] [cursor=pointer]:
+            - /url: https://www.linkedin.com/legal/privacy-policy?trk=seo-authwall-base_footer-privacy-policy
+        - listitem [ref=e94]:
+          - link "Cookie Policy" [ref=e95] [cursor=pointer]:
+            - /url: https://www.linkedin.com/legal/cookie-policy?trk=seo-authwall-base_footer-cookie-policy
+        - listitem [ref=e96]:
+          - link "Copyright Policy" [ref=e97] [cursor=pointer]:
+            - /url: https://www.linkedin.com/legal/copyright-policy?trk=seo-authwall-base_footer-copyright-policy
+        - listitem [ref=e98]:
+          - link "Brand Policy" [ref=e99] [cursor=pointer]:
+            - /url: https://brand.linkedin.com/policies?trk=seo-authwall-base_footer-brand-policy
+        - listitem [ref=e100]:
+          - link "Guest Controls" [ref=e101] [cursor=pointer]:
+            - /url: https://www.linkedin.com/psettings/guest-controls?trk=seo-authwall-base_footer-guest-controls
+        - listitem [ref=e102]:
+          - link "Community Guidelines" [ref=e103] [cursor=pointer]:
+            - /url: https://www.linkedin.com/legal/professional-community-policies?trk=seo-authwall-base_footer-community-guide
+        - listitem [ref=e104]:
+          - button "Language" [ref=e106]:
+            - text: Language
+            - img [ref=e108]

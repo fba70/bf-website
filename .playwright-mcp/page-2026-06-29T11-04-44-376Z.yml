@@ -1,0 +1,182 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - region "Toast message":
+      - heading "0 notifications total" [level=2] [ref=e3]
+      - alert
+  - region [ref=e4]
+  - generic [ref=e5]:
+    - generic [ref=e7]:
+      - button "Skip to search" [ref=e8] [cursor=pointer]:
+        - generic [ref=e9]: Skip to search
+      - button "Skip to main content" [ref=e10] [cursor=pointer]:
+        - generic [ref=e11]: Skip to main content
+      - button "Keyboard shortcuts" [ref=e12] [cursor=pointer]:
+        - generic [ref=e13]: Keyboard shortcuts
+      - button "Close jump menu" [ref=e14] [cursor=pointer]:
+        - img [ref=e15]
+        - generic [ref=e17]: Close jump menu
+    - banner "Global Navigation" [ref=e18]:
+      - generic [ref=e19]:
+        - link "LinkedIn" [ref=e20] [cursor=pointer]:
+          - /url: https://www.linkedin.com/feed/?nis=true
+          - img "LinkedIn" [ref=e23]:
+            - img [ref=e24]
+        - generic [ref=e28]:
+          - combobox "Search" [ref=e29]
+          - generic:
+            - img
+        - navigation "Primary Navigation" [ref=e30]:
+          - list [ref=e31]:
+            - listitem [ref=e32]:
+              - link "new feed updates notifications Home" [ref=e33] [cursor=pointer]:
+                - /url: https://www.linkedin.com/feed/?nis=true&
+                - generic [ref=e34]:
+                  - generic [ref=e37]: new feed updates notifications
+                  - img [ref=e41]
+                - generic "Home" [ref=e43]
+            - listitem [ref=e44]:
+              - link "My Network" [ref=e45] [cursor=pointer]:
+                - /url: https://www.linkedin.com/mynetwork/?
+                - img [ref=e49]
+                - generic "My Network" [ref=e51]
+            - listitem [ref=e52]:
+              - link "Jobs" [ref=e53] [cursor=pointer]:
+                - /url: https://www.linkedin.com/jobs/?
+                - img [ref=e57]
+                - generic "Jobs" [ref=e59]
+            - listitem [ref=e60]:
+              - link "Messaging" [ref=e61] [cursor=pointer]:
+                - /url: https://www.linkedin.com/messaging/?
+                - img [ref=e65]
+                - generic "Messaging" [ref=e67]
+            - listitem [ref=e68]:
+              - link "Notifications" [ref=e69] [cursor=pointer]:
+                - /url: https://www.linkedin.com/notifications/?
+                - img [ref=e73]
+                - generic "Notifications" [ref=e75]
+            - listitem [ref=e76]:
+              - button "Boris Fedotov, Ph.D. Me" [ref=e78] [cursor=pointer]:
+                - img "Boris Fedotov, Ph.D." [ref=e79]
+                - generic [ref=e80]:
+                  - text: Me
+                  - img [ref=e81]
+            - listitem [ref=e83]:
+              - button "For Business" [ref=e85] [cursor=pointer]:
+                - img [ref=e89]
+                - generic "For Business" [ref=e91]:
+                  - text: For Business
+                  - img [ref=e92]
+            - listitem [ref=e94]:
+              - link "Advertise" [ref=e95] [cursor=pointer]:
+                - /url: https://www.linkedin.com/campaignmanager/accounts?
+                - img [ref=e99]
+                - generic "Advertise" [ref=e102]
+    - generic [ref=e103]:
+      - generic [ref=e104]:
+        - list [ref=e106]:
+          - listitem [ref=e107]:
+            - link "Edit article" [ref=e108] [cursor=pointer]:
+              - /url: /article/edit/6107818224106168320/
+              - img [ref=e109]
+              - generic [ref=e111]: Edit article
+          - listitem [ref=e112]:
+            - link "View post" [ref=e113] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e114]
+              - generic [ref=e116]: View post
+        - generic [ref=e119]:
+          - main [ref=e120]:
+            - article [ref=e122]:
+              - generic "Article header" [ref=e123]:
+                - heading "in4COM Group news" [level=1] [ref=e124]:
+                  - generic [ref=e125]: in4COM Group news
+              - generic [ref=e126]:
+                - generic [ref=e127]:
+                  - generic [ref=e128]:
+                    - generic [ref=e130]:
+                      - link "Boris Fedotov, Ph.D." [ref=e132] [cursor=pointer]:
+                        - /url: /in/bfedotov/
+                        - img "Boris Fedotov, Ph.D." [ref=e134]
+                      - generic [ref=e135]:
+                        - link "Boris Fedotov, Ph.D. Boris Fedotov, Ph.D. is a Verified member" [ref=e137] [cursor=pointer]:
+                          - /url: /in/bfedotov/
+                          - heading "Boris Fedotov, Ph.D. Boris Fedotov, Ph.D. is a Verified member" [level=2] [ref=e138]:
+                            - text: Boris Fedotov, Ph.D.
+                            - img "Boris Fedotov, Ph.D. is a Verified member" [ref=e141]
+                        - generic [ref=e144]: Entrepreneur / CEO / CTO. Co-founder @ truffalo.ai. Co-founder @ IN4COM GmbH. Co-founder @ Tennis Esports.
+                    - generic [ref=e145]:
+                      - button "Save" [ref=e147] [cursor=pointer]:
+                        - img [ref=e148]
+                      - button "Open article options dropdown menu" [ref=e152] [cursor=pointer]:
+                        - img "Open article options dropdown menu" [ref=e153]
+                  - time [ref=e156]: February 23, 2016
+                - paragraph [ref=e160]:
+                  - strong [ref=e161]:
+                    - link "in4COM Group" [ref=e162] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/company/in4com-group?actionToken=p%3Dp%253Dbiz-feed-company-first-load%2526c%253D65dc40ff-2c70-4eb8-b963-48f82abe271f%2526m%253Dcompany_feed%2526n%253D0%26t%3Da%253DisFolloweeOfPoster%25253Dfalse%252526distanceFromActor%25253D-1%252526actorType%25253D%252526likedByUser%25253Dfalse%252526targetId%25253D%252526recentCommentUrns%25253D%252526targetType%25253D%252526sponsoredFlag%25253DORGANIC%252526verbType%25253Dlinkedin%2525253Apost%252526objectType%25253D%252526totalShares%25253D0%252526activityId%25253Durn%2525253Ali%2525253Aactivity%2525253A6107816952607096832%252526recentLikerUrns%25253D%252526actorId%25253Durn%2525253Ali%2525253Acompany%2525253A1781004%252526totalComments%25253D0%252526relevanceScore%25253D0%2E0%252526recentCommenterUrns%25253D%252526isPublic%25253Dtrue%252526time%25253D-1%252526totalLikes%25253D0%252526objectId%25253D%252526distanceFromNestedActor%25253D-1%2526s%253DORGANIC%2526u%253Durn%25253Ali%25253Aactivity%25253A6107816952607096832&atv=2
+                  - generic [ref=e164]:
+                    - text: in4COM Group (
+                    - link "www.in4comgroup.com" [ref=e165] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/company/in4com-group/redirect?url=http%3A%2F%2Fwww%2Ein4comgroup%2Ecom&urlhash=PvEb&actionToken=p%3Dp%253Dbiz-feed-company-first-load%2526c%253D65dc40ff-2c70-4eb8-b963-48f82abe271f%2526m%253Dcompany_feed%2526n%253D0%26t%3Da%253DisFolloweeOfPoster%25253Dfalse%252526distanceFromActor%25253D-1%252526actorType%25253D%252526likedByUser%25253Dfalse%252526targetId%25253D%252526recentCommentUrns%25253D%252526targetType%25253D%252526sponsoredFlag%25253DORGANIC%252526verbType%25253Dlinkedin%2525253Apost%252526objectType%25253D%252526totalShares%25253D0%252526activityId%25253Durn%2525253Ali%2525253Aactivity%2525253A6107816952607096832%252526recentLikerUrns%25253D%252526actorId%25253Durn%2525253Ali%2525253Acompany%2525253A1781004%252526totalComments%25253D0%252526relevanceScore%25253D0%2E0%252526recentCommenterUrns%25253D%252526isPublic%25253Dtrue%252526time%25253D-1%252526totalLikes%25253D0%252526objectId%25253D%252526distanceFromNestedActor%25253D-1%2526s%253DORGANIC%2526u%253Durn%25253Ali%25253Aactivity%25253A6107816952607096832&atv=2&actionType=CLICK
+                    - text: ) delivers a pilot solution for Partner Relationship Management and Billing system for loyalty cards business domain (tourist cards).
+          - complementary "Article reader aside content" [ref=e166]:
+            - generic [ref=e169]:
+              - heading "Comments" [level=3] [ref=e170]
+              - generic [ref=e172]:
+                - button "Comments settings" [ref=e173] [cursor=pointer]:
+                  - generic [ref=e174]: Comments settings
+                  - img [ref=e175]
+                - list [ref=e180]:
+                  - listitem [ref=e181]:
+                    - button "3 reactions" [ref=e182] [cursor=pointer]:
+                      - img "like" [ref=e183]
+                      - generic [ref=e184]: "3"
+                - generic [ref=e186]:
+                  - button "Open menu for switching identity when interacting with this post" [ref=e188] [cursor=pointer]:
+                    - generic [ref=e190]:
+                      - img "Photo of Boris Fedotov, Ph.D." [ref=e191]
+                      - img [ref=e192]
+                  - generic [ref=e194]:
+                    - button "React Like to Boris Fedotov, Ph.D.’s post" [ref=e195] [cursor=pointer]:
+                      - generic [ref=e197]:
+                        - img [ref=e198]
+                        - generic [ref=e200]: Like
+                    - button "Open reactions menu":
+                      - img [ref=e202] [cursor=pointer]
+                  - button "Comment on Boris Fedotov, Ph.D.’s post" [ref=e206] [cursor=pointer]:
+                    - img [ref=e207]
+                    - generic [ref=e209]: Comment
+                  - button "Share" [ref=e212] [cursor=pointer]:
+                    - img [ref=e213]
+                    - generic [ref=e215]: Share
+              - generic [ref=e217]:
+                - generic [ref=e223]:
+                  - generic [ref=e227]:
+                    - textbox "Text editor for creating content" [ref=e229]:
+                      - paragraph [ref=e230]
+                      - text: Add a comment…
+                    - generic [ref=e231]: Add a comment…
+                  - generic [ref=e233]:
+                    - button "Open Emoji Keyboard" [ref=e236] [cursor=pointer]:
+                      - img
+                      - generic [ref=e237]: Open Emoji Keyboard
+                    - button "Add a photo" [ref=e239] [cursor=pointer]:
+                      - img [ref=e240]
+                - generic [ref=e244]:
+                  - heading "No comments, yet." [level=2] [ref=e245]
+                  - paragraph [ref=e246]: Be the first to comment.
+                  - button "Start the conversation" [ref=e247] [cursor=pointer]:
+                    - generic [ref=e248]: Start the conversation
+        - contentinfo "Newsletter related content" [ref=e249]:
+          - generic [ref=e250]:
+            - link "Boris Fedotov, Ph.D. Boris Fedotov, Ph.D." [ref=e251] [cursor=pointer]:
+              - /url: /in/bfedotov/
+              - generic [ref=e252]:
+                - img "Boris Fedotov, Ph.D." [ref=e255]
+                - separator [ref=e256]
+              - paragraph [ref=e258]: Boris Fedotov, Ph.D.
+            - paragraph [ref=e259]: Entrepreneur / CEO / CTO. Co-founder @ truffalo.ai. Co-founder @ IN4COM GmbH. Co-founder @ Tennis Esports.
+      - contentinfo "Reader footer" [ref=e260]
+    - generic:
+      - generic:
+        - complementary "AI-powered assistant to get help with your career, jobs etc"

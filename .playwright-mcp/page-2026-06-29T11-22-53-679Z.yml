@@ -1,0 +1,336 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - region "Toast message":
+      - heading "0 notifications total" [level=2] [ref=e3]
+      - alert
+  - generic [ref=e4]:
+    - generic [ref=e6]:
+      - button "Skip to search" [ref=e7] [cursor=pointer]:
+        - generic [ref=e8]: Skip to search
+      - button "Skip to main content" [ref=e9] [cursor=pointer]:
+        - generic [ref=e10]: Skip to main content
+      - button "Keyboard shortcuts" [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: Keyboard shortcuts
+      - button "Close jump menu" [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+        - generic [ref=e16]: Close jump menu
+    - banner "Global Navigation" [ref=e17]:
+      - generic [ref=e18]:
+        - link "LinkedIn" [ref=e19] [cursor=pointer]:
+          - /url: https://www.linkedin.com/feed/?nis=true
+          - img "LinkedIn" [ref=e22]:
+            - img [ref=e23]
+        - generic [ref=e27]:
+          - combobox "Search" [ref=e28]
+          - generic:
+            - img
+        - navigation "Primary Navigation" [ref=e29]:
+          - list [ref=e30]:
+            - listitem [ref=e31]:
+              - link "new feed updates notifications Home" [ref=e32] [cursor=pointer]:
+                - /url: https://www.linkedin.com/feed/?nis=true&
+                - generic [ref=e33]:
+                  - generic [ref=e36]: new feed updates notifications
+                  - img [ref=e40]
+                - generic "Home" [ref=e42]
+            - listitem [ref=e43]:
+              - link "My Network" [ref=e44] [cursor=pointer]:
+                - /url: https://www.linkedin.com/mynetwork/?
+                - img [ref=e48]
+                - generic "My Network" [ref=e50]
+            - listitem [ref=e51]:
+              - link "Jobs" [ref=e52] [cursor=pointer]:
+                - /url: https://www.linkedin.com/jobs/?
+                - img [ref=e56]
+                - generic "Jobs" [ref=e58]
+            - listitem [ref=e59]:
+              - link "Messaging" [ref=e60] [cursor=pointer]:
+                - /url: https://www.linkedin.com/messaging/?
+                - img [ref=e64]
+                - generic "Messaging" [ref=e66]
+            - listitem [ref=e67]:
+              - link "Notifications" [ref=e68] [cursor=pointer]:
+                - /url: https://www.linkedin.com/notifications/?
+                - img [ref=e72]
+                - generic "Notifications" [ref=e74]
+            - listitem [ref=e75]:
+              - button "Boris Fedotov, Ph.D. Me" [ref=e77] [cursor=pointer]:
+                - img "Boris Fedotov, Ph.D." [ref=e78]
+                - generic [ref=e79]:
+                  - text: Me
+                  - img [ref=e80]
+            - listitem [ref=e82]:
+              - button "For Business" [ref=e84] [cursor=pointer]:
+                - img [ref=e88]
+                - generic "For Business" [ref=e90]:
+                  - text: For Business
+                  - img [ref=e91]
+            - listitem [ref=e93]:
+              - link "Advertise" [ref=e94] [cursor=pointer]:
+                - /url: https://www.linkedin.com/campaignmanager/accounts?
+                - img [ref=e98]
+                - generic "Advertise" [ref=e101]
+    - generic [ref=e102]:
+      - generic [ref=e103]:
+        - list [ref=e105]:
+          - listitem [ref=e106]:
+            - link "Edit article" [ref=e107] [cursor=pointer]:
+              - /url: /article/edit/7440108085412511744/
+              - img [ref=e108]
+              - generic [ref=e110]: Edit article
+          - listitem [ref=e111]:
+            - link "View stats" [ref=e112] [cursor=pointer]:
+              - /url: /analytics/post-summary/urn:li:activity:7440110166127157250/
+              - img [ref=e113]
+              - generic [ref=e115]: View stats
+          - listitem [ref=e116]:
+            - link "View post" [ref=e117] [cursor=pointer]:
+              - /url: /feed/update/urn:li:ugcPost:7440110165649170432/
+              - img [ref=e118]
+              - generic [ref=e120]: View post
+        - generic [ref=e123]:
+          - main [ref=e124]:
+            - article [ref=e126]:
+              - generic "Article header" [ref=e127]:
+                - figure:
+                  - generic:
+                    - img
+                - heading "Context Graph as a subject of R&D" [level=1] [ref=e128]:
+                  - generic [ref=e129]: Context Graph as a subject of R&D
+              - generic [ref=e130]:
+                - generic [ref=e131]:
+                  - generic [ref=e132]:
+                    - generic [ref=e134]:
+                      - link "Boris Fedotov, Ph.D." [ref=e136] [cursor=pointer]:
+                        - /url: /in/bfedotov/
+                        - img "Boris Fedotov, Ph.D." [ref=e138]
+                      - generic [ref=e139]:
+                        - link "Boris Fedotov, Ph.D. Boris Fedotov, Ph.D. is a Verified member" [ref=e141] [cursor=pointer]:
+                          - /url: /in/bfedotov/
+                          - heading "Boris Fedotov, Ph.D. Boris Fedotov, Ph.D. is a Verified member" [level=2] [ref=e142]:
+                            - text: Boris Fedotov, Ph.D.
+                            - img "Boris Fedotov, Ph.D. is a Verified member" [ref=e145]
+                        - generic [ref=e148]: Entrepreneur / CEO / CTO. Co-founder @ truffalo.ai. Co-founder @ IN4COM GmbH. Co-founder @ Tennis Esports.
+                    - generic [ref=e149]:
+                      - button "Save" [ref=e151] [cursor=pointer]:
+                        - img [ref=e152]
+                      - button "Open article options dropdown menu" [ref=e156] [cursor=pointer]:
+                        - img "Open article options dropdown menu" [ref=e157]
+                  - time [ref=e160]: March 18, 2026
+                - generic [ref=e164]:
+                  - paragraph [ref=e165]:
+                    - text: If you are interested in the concept of "
+                    - strong [ref=e166]: Context Graph
+                    - text: "\", it's technical side and business application, here is some review of technology research papers."
+                  - paragraph [ref=e167]:
+                    - text: The concept of a "
+                    - strong [ref=e168]: context layer
+                    - text: "\" that sits between raw operational data ("
+                    - strong [ref=e169]: Systems of Record
+                    - text: ) and the AI reasoning engine is a major focus of research in 2025 and 2026. This field is moving beyond simple Vector RAG toward
+                    - strong [ref=e170]: Agentic Memory Systems
+                    - text: as
+                    - strong [ref=e171]: Context Graph
+                    - text: as one of the important aspects of it.
+                  - paragraph [ref=e172]:
+                    - text: Here are the key research works and architectural themes currently appearing on
+                    - strong [ref=e173]:
+                      - emphasis [ref=e174]: arXiv
+                    - text: "that align with your inquiry:"
+                  - heading "Context Graphs and Semantic Metadata Layers" [level=3] [ref=e175]
+                  - paragraph [ref=e176]: How to move toward "Context Graphs" to bridge the gap between structured databases and LLM reasoning.
+                  - paragraph [ref=e177]:
+                    - strong [ref=e178]: "\"Scalable Join Inference for Large Context Graphs\" (arXiv:2603.04176, March 2026):"
+                    - text: This paper addresses the "what" by inferring relationships between disparate entities in structured databases. It proposes a hybrid approach that mimics human semantic understanding to build a graph that serves as the "institutional memory" for agents.
+                  - paragraph [ref=e179]:
+                    - strong [ref=e180]: "\"Towards Neural Graph Data Management\" (arXiv:2603.05529, March 2026):"
+                    - text: This work introduces
+                    - strong [ref=e181]: NGDBench
+                    - text: ", a benchmark for systems that integrate structured records with unstructured data. It specifically evaluates an agent's ability to reason over \"imperfect\" or \"noisy\" graph data, which is typical in real-world operational environments."
+                  - 'heading "Capturing the \"Why\": Traceability and Business Reasoning" [level=3] [ref=e182]'
+                  - paragraph [ref=e183]:
+                    - text: A major challenge in agentic AI is ensuring the agent understands the
+                    - emphasis [ref=e184]: rationale
+                    - text: (reasoning) behind a decision, not just the data point.
+                  - paragraph [ref=e185]:
+                    - strong [ref=e186]: "\"Causal Graph Tracing for Root Cause Analysis in Deployed Multi-Agent Systems\" (arXiv:2603.14688, March 2026):"
+                    - text: This paper introduces
+                    - strong [ref=e187]: AgentTrace
+                    - text: ", which reconstructs causal graphs from execution logs. It allows a system to trace backward from an action to the \"why\" - identifying the specific business reasoning or dependency that led to a particular decision."
+                  - paragraph [ref=e188]:
+                    - strong [ref=e189]: "\"Governing Cloud Data Pipelines with Agentic AI\" (arXiv:2512.23737, Dec 2025):"
+                    - text: This research proposes a
+                    - strong [ref=e190]: Policy-Aware Control Plane
+                    - text: . It separates the "Data Plane" (operational data) from the "Agentic Control Plane" and a "Policy/Governance Plane." The agents reason over metadata and
+                    - emphasis [ref=e191]: explicit policy representations
+                    - text: (the "why") before proposing actions.
+                  - heading "Personalization and State Management" [level=3] [ref=e192]
+                  - paragraph [ref=e193]: For agentic work to be effective, it must maintain a "Cognitive State" that persists across interactions.
+                  - paragraph [ref=e194]:
+                    - strong [ref=e195]: "\"AI Agents Need Memory Control Over More Context\" (arXiv:2601.11653, Jan 2026):"
+                    - text: This paper introduces the
+                    - strong [ref=e196]: Agent Cognitive Compressor (ACC)
+                    - text: . Instead of just replaying a transcript of what happened, it maintains a "Compressed Cognitive State" (CCS) that tracks goals, constraints, and confirmed decisions. This acts as a metadata layer that filters out "noise" while retaining the personalized context of the user’s intent.
+                  - paragraph [ref=e197]:
+                    - strong [ref=e198]: "\"A Unified Framework and Roadmap for Context-Aware AI in Education\" (arXiv:2512.24362, Dec 2025):"
+                    - text: While focused on education, this paper defines a
+                    - strong [ref=e199]: Learning Context (LC) Data Structure
+                    - text: that encodes cognitive and sociocultural factors. This is a prime example of a metadata layer designed specifically for long-term personalization.
+                  - heading "Architectural Frameworks (from Systems of Record to Systems of Action)" [level=3] [ref=e200]
+                  - paragraph [ref=e201]:
+                    - strong [ref=e202]: "\"The Orchestration of Multi-Agent Systems: Architectures, Protocols, and Enterprise Adoption\" (arXiv:2601.13671, Jan 2026):"
+                    - text: This is a comprehensive look at the "Orchestration Layer." It explicitly discusses the
+                    - strong [ref=e203]: separation of operational state from knowledge state
+                    - text: ", where a \"Knowledge Unit\" connects to external Systems of Record and exposes them as a \"retrievable context\" for worker agents."
+                  - paragraph [ref=e204]:
+                    - strong [ref=e205]: "\"AI Agents in Financial Markets: Architecture, Applications, and Systemic Implications\" (arXiv:2603.13942, March 2026):"
+                    - text: Proposes a four-layer architecture (Data Perception, Reasoning, Strategy, Execution). The
+                    - strong [ref=e206]: Strategy Generation
+                    - text: layer is where the "why" is synthesized into "explanatory narratives" for human audit.
+                  - paragraph [ref=e207]: "#ai #agents #contextgraph #research"
+          - complementary "Article reader aside content" [ref=e208]:
+            - generic [ref=e211]:
+              - heading "Comments" [level=3] [ref=e212]
+              - generic [ref=e214]:
+                - button "Comments settings" [ref=e215] [cursor=pointer]:
+                  - generic [ref=e216]: Comments settings
+                  - img [ref=e217]
+                - list [ref=e222]:
+                  - listitem [ref=e223]:
+                    - button "5 reactions" [ref=e224] [cursor=pointer]:
+                      - img "like" [ref=e225]
+                      - generic [ref=e226]: "5"
+                    - text: ·
+                  - listitem [ref=e227]:
+                    - list [ref=e228]:
+                      - listitem [ref=e229]:
+                        - button "2 comments on Boris Fedotov, Ph.D.’s post" [ref=e230] [cursor=pointer]:
+                          - generic [ref=e231]: 2 comments
+                - generic [ref=e233]:
+                  - button "Open menu for switching identity when interacting with this post" [ref=e235] [cursor=pointer]:
+                    - generic [ref=e237]:
+                      - img "Photo of Boris Fedotov, Ph.D." [ref=e238]
+                      - img [ref=e239]
+                  - generic [ref=e241]:
+                    - button "React Like to Boris Fedotov, Ph.D.’s post" [ref=e242] [cursor=pointer]:
+                      - generic [ref=e244]:
+                        - img [ref=e245]
+                        - generic [ref=e247]: Like
+                    - button "Open reactions menu":
+                      - img [ref=e249] [cursor=pointer]
+                  - button "Comment on Boris Fedotov, Ph.D.’s post" [ref=e253] [cursor=pointer]:
+                    - img [ref=e254]
+                    - generic [ref=e256]: Comment
+                  - button "Share" [ref=e259] [cursor=pointer]:
+                    - img [ref=e260]
+                    - generic [ref=e262]: Share
+              - generic [ref=e264]:
+                - generic [ref=e265]:
+                  - generic [ref=e270]:
+                    - generic [ref=e274]:
+                      - textbox "Text editor for creating content" [ref=e276]:
+                        - paragraph [ref=e277]
+                        - text: Add a comment…
+                      - generic [ref=e278]: Add a comment…
+                    - generic [ref=e280]:
+                      - button "Open Emoji Keyboard" [ref=e283] [cursor=pointer]:
+                        - img
+                        - generic [ref=e284]: Open Emoji Keyboard
+                      - button "Add a photo" [ref=e286] [cursor=pointer]:
+                        - img [ref=e287]
+                  - button "Current selected sort order is Most recent" [ref=e293] [cursor=pointer]:
+                    - generic [ref=e294]: Current selected sort order is Most recent
+                    - generic [ref=e295]:
+                      - text: Most recent
+                      - img [ref=e296]
+                - article [ref=e300]:
+                  - generic [ref=e301]:
+                    - generic [ref=e302]:
+                      - link "View Henri Feldges’ graphic link" [ref=e303] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/in/henri-feldges-aa395b210
+                        - img "View Henri Feldges’ graphic link" [ref=e306]
+                      - 'link "View: Henri Feldges • 2nd LinkedIn Leads 10x (ohne Paid Ads) | Business Development Manager @ Lars Krüger GmbH | Senior Berater @ tecis |" [ref=e307] [cursor=pointer]':
+                        - /url: https://www.linkedin.com/in/henri-feldges-aa395b210
+                        - heading "Henri Feldges • 2nd" [level=3] [ref=e308]:
+                          - generic [ref=e309]: Henri Feldges
+                          - generic [ref=e310]:
+                            - img [ref=e311]
+                            - text: • 2nd
+                        - generic [ref=e313]: LinkedIn Leads 10x (ohne Paid Ads) | Business Development Manager @ Lars Krüger GmbH | Senior Berater @ tecis |
+                    - generic [ref=e314]:
+                      - time [ref=e315]: 3mo
+                      - button "Open options for Henri Feldges’ comment" [ref=e318] [cursor=pointer]:
+                        - img "Open options for Henri Feldges’ comment" [ref=e319]
+                  - generic [ref=e321]:
+                    - button [ref=e322] [cursor=pointer]
+                    - generic [ref=e325]:
+                      - generic [ref=e329]: Klingt spannend, viel Erfolg dabei! 😊
+                      - button "Show translation of this comment" [ref=e331] [cursor=pointer]:
+                        - generic [ref=e332]: Show translation
+                        - generic [ref=e333]: Show translation of this comment
+                  - generic [ref=e334]:
+                    - generic [ref=e335]:
+                      - button [ref=e336] [cursor=pointer]
+                      - generic [ref=e338]:
+                        - generic [ref=e339]:
+                          - generic [ref=e340]:
+                            - button "Unreact Like to Henri Feldges’ comment" [pressed] [ref=e341] [cursor=pointer]:
+                              - generic [ref=e344]: Like
+                            - button "Open reactions menu":
+                              - img [ref=e346] [cursor=pointer]
+                          - generic [ref=e348]: ·
+                          - button "1 Reaction on Henri Feldges’ comment" [ref=e349] [cursor=pointer]:
+                            - img "like" [ref=e350]
+                            - generic [ref=e351]: "1"
+                        - generic [ref=e353]:
+                          - button "Reply to Henri Feldges’ comment" [ref=e354] [cursor=pointer]:
+                            - generic [ref=e356]: Reply
+                          - generic [ref=e357]: ·
+                          - generic [ref=e358]: 1 reply
+                          - generic [ref=e359]: 1 Comment on Henri Feldges’ comment
+                    - generic [ref=e361]:
+                      - button [ref=e362] [cursor=pointer]
+                      - article [ref=e364]:
+                        - generic [ref=e365]:
+                          - generic [ref=e366]:
+                            - link "View Boris Fedotov, Ph.D.’s graphic link" [ref=e367] [cursor=pointer]:
+                              - /url: https://www.linkedin.com/in/bfedotov
+                              - img "View Boris Fedotov, Ph.D.’s graphic link" [ref=e370]
+                            - 'link "View: Boris Fedotov, Ph.D. Author, Entrepreneur / CEO / CTO. Co-founder @ truffalo.ai. Co-founder @ IN4COM GmbH. Co-founder @ Tennis Esports." [ref=e371] [cursor=pointer]':
+                              - /url: https://www.linkedin.com/in/bfedotov
+                              - heading "Boris Fedotov, Ph.D. Author" [level=3] [ref=e372]:
+                                - generic [ref=e373]: Boris Fedotov, Ph.D.
+                                - img [ref=e375]
+                                - generic [ref=e377]: Author
+                              - generic [ref=e378]: Entrepreneur / CEO / CTO. Co-founder @ truffalo.ai. Co-founder @ IN4COM GmbH. Co-founder @ Tennis Esports.
+                          - generic [ref=e379]:
+                            - time [ref=e380]: 3mo
+                            - button "Open options for Boris Fedotov, Ph.D.’s comment" [ref=e383] [cursor=pointer]:
+                              - img "Open options for Boris Fedotov, Ph.D.’s comment" [ref=e384]
+                        - generic [ref=e394]:
+                          - link "Henri Feldges" [ref=e396] [cursor=pointer]:
+                            - /url: /in/henri-feldges-aa395b210/
+                          - text: 👌
+                        - generic [ref=e401]:
+                          - generic [ref=e403]:
+                            - button "React Like to Boris Fedotov, Ph.D.’s comment" [ref=e404] [cursor=pointer]:
+                              - generic [ref=e407]: Like
+                            - button "Open reactions menu":
+                              - img [ref=e409] [cursor=pointer]
+                          - button "Reply to Boris Fedotov, Ph.D.’s comment" [ref=e413] [cursor=pointer]:
+                            - generic [ref=e415]: Reply
+                          - generic [ref=e418]: 1 impression
+        - contentinfo "Newsletter related content" [ref=e419]:
+          - generic [ref=e420]:
+            - link "Boris Fedotov, Ph.D. Boris Fedotov, Ph.D." [ref=e421] [cursor=pointer]:
+              - /url: /in/bfedotov/
+              - generic [ref=e422]:
+                - img "Boris Fedotov, Ph.D." [ref=e425]
+                - separator [ref=e426]
+              - paragraph [ref=e428]: Boris Fedotov, Ph.D.
+            - paragraph [ref=e429]: Entrepreneur / CEO / CTO. Co-founder @ truffalo.ai. Co-founder @ IN4COM GmbH. Co-founder @ Tennis Esports.
+      - contentinfo "Reader footer" [ref=e430]
+    - generic:
+      - generic:
+        - complementary "AI-powered assistant to get help with your career, jobs etc"
+  - region [ref=e432]

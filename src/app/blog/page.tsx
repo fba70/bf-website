@@ -1,22 +1,22 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from "next"
+import Link from "next/link"
 
-import { getAllPosts, formatDate } from "@/lib/blog";
-import { PageShell } from "@/components/page-shell";
-import { Badge } from "@/components/ui/badge";
+import { getAllPosts, formatDate } from "@/lib/blog"
+import { PageShell } from "@/components/page-shell"
+import { Badge } from "@/components/ui/badge"
 
 export const metadata: Metadata = {
   title: "Blog",
   description: "Notes and longer-form writing on what I'm learning.",
-};
+}
 
 export default function BlogPage() {
-  const posts = getAllPosts();
+  const posts = getAllPosts()
 
   return (
     <PageShell
       title="Blog"
-      lead="Placeholder posts written in Markdown. Add files to content/blog."
+      lead="Some of my articles originally posted on LinkedIn"
     >
       {posts.length === 0 ? (
         <p className="text-muted-foreground">No posts yet — check back soon.</p>
@@ -57,5 +57,5 @@ export default function BlogPage() {
         </ul>
       )}
     </PageShell>
-  );
+  )
 }

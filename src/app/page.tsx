@@ -5,6 +5,7 @@ import {
   Mail,
   Wrench,
   FolderGit2,
+  Building2,
   GraduationCap,
   PenLine,
 } from "lucide-react"
@@ -44,6 +45,12 @@ const highlights = [
     href: "/projects",
     icon: FolderGit2,
     blurb: "A selection of things I've designed, built, and shipped",
+  },
+  {
+    title: "Companies",
+    href: "/companies",
+    icon: Building2,
+    blurb: "Companies I've founded and worked with over the years",
   },
   {
     title: "Education",

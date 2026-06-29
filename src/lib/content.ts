@@ -237,6 +237,66 @@ export const projects: Project[] = [
   },
 ]
 
+export type Company = {
+  name: string
+  url?: string
+  role: string
+  from: string
+  to: string // year or "Present"
+}
+
+export const companies: Company[] = [
+  {
+    name: "truffalo.ai GmbH",
+    url: "https://truffalo.ai",
+    role: "Co-founder & CTO",
+    from: "2026",
+    to: "Present",
+  },
+  {
+    name: "IN4COM GmbH",
+    url: "https://www.in4comgroup.com",
+    role: "CTO & Head of R&D",
+    from: "2021",
+    to: "2026",
+  },
+  {
+    name: "Tennis Esports",
+    url: "https://www.tennis-esports.com",
+    role: "Co-founder & CDO",
+    from: "2019",
+    to: "Present",
+  },
+  {
+    name: "IN4COM LLC",
+    url: "https://www.in4comgroup.com",
+    role: "Founder & CTO",
+    from: "2010",
+    to: "2021",
+  },
+  {
+    name: "JASMiND LLC",
+    url: "https://www.jasmind-consulting.com",
+    role: "Partner",
+    from: "2007",
+    to: "2010",
+  },
+  {
+    name: "NETCRACKER TECHNOLOGIES",
+    url: "https://www.netcracker.com",
+    role: "Solutions Delivery Director",
+    from: "2004",
+    to: "2007",
+  },
+  {
+    name: "PROTEK FLAGSHIP",
+    url: "https://www.protek.com",
+    role: "Solutions Delivery Director",
+    from: "1999",
+    to: "2004",
+  },
+]
+
 export type Education = {
   school: string
   credential: string

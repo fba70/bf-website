@@ -3,7 +3,7 @@ export const siteConfig = {
   // Short role/tagline shown in hero + metadata
   title: "Boris Fedotov, PhD — Engineer & Builder",
   description:
-    "Personal site of Boris Fedotov — skills, projects, education, and writing.",
+    "Boris Fedotov, PhD — physicist and serial CTO with 25+ years building and shipping software. Essays on AI agents, agentic architectures, and context graphs.",
   // Update to the real production domain before launch.
   url: "https://fba70.vercel.app",
   locale: "en_US",
@@ -21,6 +21,7 @@ export const navItems: NavItem[] = [
   { title: "Home", href: "/" },
   { title: "Skills", href: "/skills" },
   { title: "Projects", href: "/projects" },
+  { title: "Companies", href: "/companies" },
   { title: "Education", href: "/education" },
   { title: "Blog", href: "/blog" },
 ]
