@@ -126,6 +126,13 @@ export default function HomePage() {
           projects and interesting ideas
         </p>
       </section>
+      <section className="pb-16">
+        <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-muted-foreground">
+          Get in touch with me via email or LinkedIn if you think I could be
+          helpful for your project or if you want to discuss a potential
+          collaboration
+        </p>
+      </section>
 
       {/* Section cards */}
       <section className="grid gap-4 pb-24 sm:grid-cols-2">
