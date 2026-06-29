@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata } from "next"
 
-import { education } from "@/lib/content";
-import { PageShell } from "@/components/page-shell";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { education, courses } from "@/lib/content"
+import { PageShell } from "@/components/page-shell"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export const metadata: Metadata = {
   title: "Education",
   description: "Degrees, courses, and milestones along the way.",
-};
+}
 
 export default function EducationPage() {
   return (
@@ -33,6 +33,24 @@ export default function EducationPage() {
           </Card>
         ))}
       </div>
+
+      <div className="mt-12">
+        <h2 className="text-xl font-semibold tracking-tight">
+          Software development &amp; IT courses
+        </h2>
+        <p className="mt-1 text-sm text-muted-foreground">
+          Shorter courses I&apos;ve completed along the way.
+        </p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {courses.map((course) => (
+            <Card key={course.name}>
+              <CardContent className="py-2 text-sm font-medium">
+                {course.name}
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
     </PageShell>
-  );
+  )
 }

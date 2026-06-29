@@ -1,14 +1,13 @@
-import Link from "next/link";
-import { Mail } from "lucide-react";
-
-import { GithubIcon, LinkedinIcon } from "@/components/icons";
-import { siteConfig } from "@/lib/site";
-import { Button } from "@/components/ui/button";
+import Link from "next/link"
+import { Mail } from "lucide-react"
+import { GithubIcon, LinkedinIcon } from "@/components/icons"
+import { siteConfig } from "@/lib/site"
+import { Button } from "@/components/ui/button"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/components/ui/tooltip"
 
 const socials = [
   {
@@ -29,10 +28,10 @@ const socials = [
     icon: GithubIcon,
     external: true,
   },
-];
+]
 
 export function SiteFooter() {
-  const year = new Date().getFullYear();
+  const year = new Date().getFullYear()
 
   return (
     <footer className="border-t border-border/60">
@@ -65,5 +64,5 @@ export function SiteFooter() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

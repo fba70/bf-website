@@ -1,9 +1,17 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import Image from "next/image"
+import Link from "next/link"
+import {
+  ArrowRight,
+  Mail,
+  Wrench,
+  FolderGit2,
+  GraduationCap,
+  PenLine,
+} from "lucide-react"
 
-import { siteConfig } from "@/lib/site";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { siteConfig } from "@/lib/site"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -22,30 +30,34 @@ const jsonLd = {
       description: siteConfig.description,
     },
   ],
-};
+}
 
 const highlights = [
   {
     title: "Skills",
     href: "/skills",
-    blurb: "Languages, frameworks, and tools I work with day to day.",
+    icon: Wrench,
+    blurb: "Languages, frameworks, and tools I work with day to day",
   },
   {
     title: "Projects",
     href: "/projects",
-    blurb: "A selection of things I've designed, built, and shipped.",
+    icon: FolderGit2,
+    blurb: "A selection of things I've designed, built, and shipped",
   },
   {
     title: "Education",
     href: "/education",
-    blurb: "Degrees, courses, and the milestones along the way.",
+    icon: GraduationCap,
+    blurb: "Degrees, courses, and the milestones along the way",
   },
   {
     title: "Blog",
     href: "/blog",
-    blurb: "Notes and longer-form writing on what I'm learning.",
+    icon: PenLine,
+    blurb: "Notes and longer-form writing on what I'm learning",
   },
-];
+]
 
 export default function HomePage() {
   return (
@@ -55,26 +67,56 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Hero */}
-      <section className="py-20 sm:py-28">
-        <p className="font-mono text-sm text-primary">Hello, I&apos;m</p>
-        <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-6xl">
-          {siteConfig.name}
-        </h1>
-        <p className="mt-5 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-          This is placeholder copy. I&apos;m an engineer and builder who likes
-          turning fuzzy ideas into shipped products. This site is a work in
-          progress — content and design are coming soon.
-        </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Button asChild>
-            <Link href="/projects">
-              View projects <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Button>
-          <Button asChild variant="outline">
-            <Link href="/blog">Read the blog</Link>
-          </Button>
+      <section className="flex flex-col items-start gap-8 py-20 sm:flex-row sm:items-center sm:gap-12 sm:py-28">
+        <Image
+          src="/BF_foto.jpg"
+          alt={siteConfig.name}
+          width={1000}
+          height={1000}
+          priority
+          className="h-40 w-40 shrink-0 rounded-full border-4 border-border object-cover shadow-sm sm:h-56 sm:w-56"
+        />
+        <div>
+          <p className="font-mono text-base text-primary">Hello, I&apos;m</p>
+          <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-6xl">
+            {siteConfig.name}, PhD
+          </h1>
+          <p className="mt-5 max-w-2xl text-lg text-muted-foreground sm:text-xl">
+            I&apos;m PhD physicist and serial CTO with 25+ years experience who
+            still architects and ships the code to my own and customer projects
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild>
+              <a href={`mailto:${siteConfig.email}`}>
+                <Mail className="h-4 w-4" /> Contact me
+              </a>
+            </Button>
+            <Button asChild variant="secondary">
+              <Link href="/projects">View my projects</Link>
+            </Button>
+            <Button asChild variant="secondary">
+              <Link href="/blog">Read my blog</Link>
+            </Button>
+            <Button asChild variant="secondary">
+              <a href="/BF_CV.pdf" download>
+                Download my CV
+              </a>
+            </Button>
+          </div>
         </div>
+      </section>
+
+      {/* Intro */}
+      <section className="pb-16">
+        <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-muted-foreground">
+          Ideas are the cornerstones of business. I help ideas to take shape and
+          become solutions to address the challenges my clients and partners
+          have in modern competitive environment. I put together vision and
+          strategy, subject matter expertise and experience, software
+          architecture and software development skills, known technologies and
+          scientific research, and finally all my time and energy to make that
+          happen
+        </p>
       </section>
 
       {/* Section cards */}
@@ -84,7 +126,10 @@ export default function HomePage() {
             <Card className="h-full transition-colors group-hover:border-primary/50">
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
-                  {h.title}
+                  <span className="flex items-center gap-2">
+                    <h.icon className="h-5 w-5 text-primary" />
+                    {h.title}
+                  </span>
                   <ArrowRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:translate-x-1" />
                 </CardTitle>
               </CardHeader>
@@ -96,5 +141,5 @@ export default function HomePage() {
         ))}
       </section>
     </div>
-  );
+  )
 }
