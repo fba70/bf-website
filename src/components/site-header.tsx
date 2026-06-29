@@ -1,35 +1,46 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Menu } from "lucide-react";
+import * as React from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { usePathname } from "next/navigation"
+import { Menu } from "lucide-react"
 
-import { cn } from "@/lib/utils";
-import { navItems, siteConfig } from "@/lib/site";
-import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/mode-toggle";
+import { cn } from "@/lib/utils"
+import { navItems, siteConfig } from "@/lib/site"
+import { Button } from "@/components/ui/button"
+import { ModeToggle } from "@/components/mode-toggle"
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "@/components/ui/sheet"
 
 function isActive(pathname: string, href: string) {
-  if (href === "/") return pathname === "/";
-  return pathname === href || pathname.startsWith(`${href}/`);
+  if (href === "/") return pathname === "/"
+  return pathname === href || pathname.startsWith(`${href}/`)
 }
 
 export function SiteHeader() {
-  const pathname = usePathname();
-  const [open, setOpen] = React.useState(false);
+  const pathname = usePathname()
+  const [open, setOpen] = React.useState(false)
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link href="/" className="font-semibold tracking-tight">
+        <Link
+          href="/"
+          className="flex items-center gap-2 font-semibold tracking-tight"
+        >
+          <Image
+            src="/BF_foto.jpg"
+            alt={siteConfig.name}
+            width={32}
+            height={32}
+            className="h-8 w-8 rounded-full border border-border object-cover"
+          />
           {siteConfig.name}
         </Link>
 
@@ -92,5 +103,5 @@ export function SiteHeader() {
         </div>
       </div>
     </header>
-  );
+  )
 }

@@ -43,6 +43,10 @@ export const skills: SkillGroup[] = [
     category: "AI & ML",
     items: ["Vercel AI SDK", "Vercel Chat SDK", "Vercel Workflows"],
   },
+  {
+    category: "I speak",
+    items: ["Russian", "English", "German", "Italian"],
+  },
 ]
 
 export type ProjectCategory =
@@ -256,7 +260,7 @@ export const companies: Company[] = [
   {
     name: "IN4COM GmbH",
     url: "https://www.in4comgroup.com",
-    role: "CTO & Head of R&D",
+    role: "Co-founder & CTO",
     from: "2021",
     to: "2026",
   },

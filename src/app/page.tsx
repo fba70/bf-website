@@ -99,12 +99,6 @@ export default function HomePage() {
               </a>
             </Button>
             <Button asChild variant="secondary">
-              <Link href="/projects">View my projects</Link>
-            </Button>
-            <Button asChild variant="secondary">
-              <Link href="/blog">Read my blog</Link>
-            </Button>
-            <Button asChild variant="secondary">
               <a href="/BF_CV.pdf" download>
                 Download my CV
               </a>
@@ -123,6 +117,13 @@ export default function HomePage() {
           architecture and software development skills, known technologies and
           scientific research, and finally all my time and energy to make that
           happen
+        </p>
+      </section>
+      <section className="pb-16">
+        <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-muted-foreground">
+          Since 2015 I live and work in Vienna, Austria. Always happy to talk to
+          friends, partners and new contacts in Europe, US and Middle East about
+          projects and interesting ideas
         </p>
       </section>
 
