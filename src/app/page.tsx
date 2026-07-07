@@ -1,5 +1,5 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRight,
   Mail,
@@ -8,11 +8,11 @@ import {
   Building2,
   GraduationCap,
   PenLine,
-} from "lucide-react"
+} from "lucide-react";
 
-import { siteConfig } from "@/lib/site"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { siteConfig } from "@/lib/site";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -31,7 +31,7 @@ const jsonLd = {
       description: siteConfig.description,
     },
   ],
-}
+};
 
 const highlights = [
   {
@@ -64,7 +64,7 @@ const highlights = [
     icon: PenLine,
     blurb: "Notes and longer-form writing on what I'm learning",
   },
-]
+];
 
 export default function HomePage() {
   return (
@@ -89,8 +89,9 @@ export default function HomePage() {
             {siteConfig.name}, PhD
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            I&apos;m PhD physicist and serial CTO with 25+ years experience who
-            still architects and ships the code to my own and customer projects
+            I&apos;m PhD physicist, serial CTO and project manager with 25+
+            years experience who architects software solutions, drives teams and
+            ships the code to my own and customer projects
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild>
@@ -156,5 +157,5 @@ export default function HomePage() {
         ))}
       </section>
     </div>
-  )
+  );
 }

@@ -1,6 +1,6 @@
 // Placeholder content. Replace with real data later.
 
-export type SkillGroup = { category: string; items: string[] }
+export type SkillGroup = { category: string; items: string[] };
 
 export const skills: SkillGroup[] = [
   {
@@ -13,7 +13,7 @@ export const skills: SkillGroup[] = [
   },
   {
     category: "Concepts",
-    items: ["Business Concepts", "Product Concepts", "Strategies"],
+    items: ["Business Concepts", "Product Concepts", "IT Strategies"],
   },
   {
     category: "Architectures",
@@ -29,7 +29,7 @@ export const skills: SkillGroup[] = [
   },
   {
     category: "Backend",
-    items: ["Node.js", "PostgreSQL", "Redis", "REST APIs", "Inngest"],
+    items: ["Node.js", "PostgreSQL", "REST APIs", "Redis", "Inngest"],
   },
   {
     category: "Tooling & Cloud",
@@ -41,27 +41,27 @@ export const skills: SkillGroup[] = [
   },
   {
     category: "AI & ML",
-    items: ["Vercel AI SDK", "Vercel Chat SDK", "Vercel Workflows"],
+    items: ["Vercel AI SDK", "Vercel Chat SDK", "Vercel Workflows", "MCP/CLI"],
   },
   {
     category: "I speak",
     items: ["Russian", "English", "German", "Italian"],
   },
-]
+];
 
 export type ProjectCategory =
   | "project management"
   | "data management"
   | "software development"
-  | "AI tools"
+  | "AI tools";
 
 export type Project = {
-  id: number
-  name: string
-  category: ProjectCategory
-  complexity: 1 | 2 | 3
-  tags: string[]
-}
+  id: number;
+  name: string;
+  category: ProjectCategory;
+  complexity: 1 | 2 | 3;
+  tags: string[];
+};
 
 export const projects: Project[] = [
   {
@@ -239,15 +239,15 @@ export const projects: Project[] = [
     complexity: 3,
     tags: ["AI", "Next.js", "Node.js", "PostgreSQL", "AI SDK", "Agents"],
   },
-]
+];
 
 export type Company = {
-  name: string
-  url?: string
-  role: string
-  from: string
-  to: string // year or "Present"
-}
+  name: string;
+  url?: string;
+  role: string;
+  from: string;
+  to: string; // year or "Present"
+};
 
 export const companies: Company[] = [
   {
@@ -299,21 +299,22 @@ export const companies: Company[] = [
     from: "1999",
     to: "2004",
   },
-]
+];
 
 export type Education = {
-  school: string
-  credential: string
-  period: string
-  detail: string
-}
+  school: string;
+  credential: string;
+  period: string;
+  detail: string;
+};
 
 export const education: Education[] = [
   {
     school: "Moscow Institute of Physics & Engineering (MEPhI)",
-    credential: "M.Sc. in Theoretical Physics",
+    credential: "B.Sc. in Theoretical Physics",
     period: "1987 — 1993",
-    detail: "Graduated with honour degree from dept. of Theoretical Physics",
+    detail:
+      "Graduated with honour degree from the department of Theoretical Physics",
   },
   {
     school: "Moscow Institute of Physics & Engineering (MEPhI)",
@@ -322,9 +323,9 @@ export const education: Education[] = [
     detail:
       "Postgraduate research in Theoretical Physics (Field Theory methods in Surface Science and Non-equilibrium Thermodynamics)",
   },
-]
+];
 
-export type Course = { name: string }
+export type Course = { name: string };
 
 export const courses: Course[] = [
   { name: "IBM Project Management" },
@@ -342,4 +343,4 @@ export const courses: Course[] = [
   { name: "DL tools" },
   { name: "Prompting techniques" },
   { name: "LangChain & RAG" },
-]
+];
