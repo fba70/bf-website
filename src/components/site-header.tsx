@@ -4,7 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { Menu } from "lucide-react"
+import { Mail, Menu } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { navItems, siteConfig } from "@/lib/site"
@@ -63,6 +63,13 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-1">
+          <Button asChild size="sm" className="mr-1">
+            <a href={`mailto:${siteConfig.email}`}>
+              <Mail className="h-4 w-4" />
+              <span className="hidden sm:inline">Contact me</span>
+            </a>
+          </Button>
+
           <ModeToggle />
 
           {/* Mobile menu */}
