@@ -109,7 +109,7 @@ export default function HomePage() {
       </section>
 
       {/* Intro */}
-      <section className="pb-16">
+      <section className="pb-8">
         <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-muted-foreground">
           Ideas are the cornerstones of business. I help ideas to take shape and
           become solutions to address the challenges my clients and partners
@@ -120,7 +120,7 @@ export default function HomePage() {
           happen
         </p>
       </section>
-      <section className="pb-16">
+      <section className="pb-8">
         <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-muted-foreground">
           Since 2015 I live and work in Vienna, Austria. Always happy to talk to
           friends, partners and new contacts in Europe, US and Middle East about

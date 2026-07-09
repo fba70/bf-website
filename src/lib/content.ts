@@ -45,7 +45,7 @@ export const skills: SkillGroup[] = [
   },
   {
     category: "I speak",
-    items: ["Russian", "English", "German", "Italian"],
+    items: ["Russian (Native)", "English (Pro)", "German (B2)", "Italian (A2)"],
   },
 ];
 
@@ -253,7 +253,7 @@ export const companies: Company[] = [
   {
     name: "truffalo.ai GmbH",
     url: "https://truffalo.ai",
-    role: "Co-founder & CTO",
+    role: "CTO",
     from: "2026",
     to: "Present",
   },
