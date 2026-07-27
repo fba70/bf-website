@@ -1,6 +1,6 @@
 // Placeholder content. Replace with real data later.
 
-export type SkillGroup = { category: string; items: string[] };
+export type SkillGroup = { category: string; items: string[] }
 
 export const skills: SkillGroup[] = [
   {
@@ -47,207 +47,221 @@ export const skills: SkillGroup[] = [
     category: "I speak",
     items: ["Russian (Native)", "English (Pro)", "German (B2)", "Italian (A2)"],
   },
-];
+]
 
 export type ProjectCategory =
   | "project management"
   | "data management"
   | "software development"
-  | "AI tools";
+  | "AI tools"
 
 export type Project = {
-  id: number;
-  name: string;
-  category: ProjectCategory;
-  complexity: 1 | 2 | 3;
-  tags: string[];
-};
+  id: number
+  name: string
+  category: ProjectCategory
+  complexity: 1 | 2 | 3
+  tags: string[]
+}
 
 export const projects: Project[] = [
   {
     id: 0,
+    name: "Billing solutions implementation for Protek Flagship",
+    category: "project management",
+    complexity: 3,
+    tags: ["bss", "billing", "telecom", "project management"],
+  },
+  {
+    id: 1,
+    name: "OSS solutions delivery for Netcracker Technologies",
+    category: "project management",
+    complexity: 3,
+    tags: ["oss", "telecom", "project management"],
+  },
+  {
+    id: 2,
     name: "M&A deals management for Tele2 group",
     category: "project management",
     complexity: 3,
     tags: ["analytics", "processes", "project management", "M&A"],
   },
   {
-    id: 1,
+    id: 3,
     name: "Utilities billing solution audit",
     category: "project management",
     complexity: 3,
     tags: ["analytics", "processes", "project management"],
   },
   {
-    id: 2,
+    id: 4,
     name: "Auto telematics tech drive tests in Europe",
     category: "project management",
     complexity: 2,
     tags: ["analytics", "project management"],
   },
   {
-    id: 3,
+    id: 5,
     name: "Project management for Tele2 group (25+ projects)",
     category: "project management",
     complexity: 3,
     tags: ["analytics", "processes", "project management"],
   },
   {
-    id: 4,
+    id: 6,
     name: "E-booking solution development for travel agencies",
     category: "software development",
     complexity: 2,
     tags: ["React", "PHP"],
   },
   {
-    id: 5,
+    id: 7,
     name: "EDW solution design for Tier 1 telecom operator",
     category: "data management",
     complexity: 3,
     tags: ["Cognos", "Oracle", "PL/SQL"],
   },
   {
-    id: 6,
+    id: 8,
     name: "Financial systems audit for telecom operator",
     category: "project management",
     complexity: 2,
     tags: ["analytics", "processes", "Oracle"],
   },
   {
-    id: 7,
+    id: 9,
     name: "Business processes definition for greenfield operator",
     category: "project management",
     complexity: 3,
     tags: ["analytics", "processes"],
   },
   {
-    id: 8,
+    id: 10,
     name: "Data management projects for government agencies",
     category: "data management",
     complexity: 3,
     tags: [],
   },
   {
-    id: 9,
+    id: 11,
     name: "BSS / OSS solutions delivery world-wide for Tier 1 telco operators",
     category: "project management",
     complexity: 3,
     tags: ["Oracle", "PL/SQL", "Java"],
   },
   {
-    id: 10,
+    id: 12,
     name: "Management dashboards concept and solution",
     category: "data management",
     complexity: 2,
     tags: ["Python", "PowerBI"],
   },
   {
-    id: 11,
+    id: 13,
     name: "Operational excellence solutions for banks",
     category: "project management",
     complexity: 3,
     tags: ["Oracle", "PL/SQL", "Python", "ML", "PowerBI"],
   },
   {
-    id: 12,
+    id: 14,
     name: "Churn management solutions for banks",
     category: "data management",
     complexity: 3,
     tags: ["Oracle", "PL/SQL", "Python", "ML"],
   },
   {
-    id: 13,
+    id: 15,
     name: "Fraud detection management solutions for banks",
     category: "data management",
     complexity: 3,
     tags: ["Oracle", "PL/SQL", "Python", "ML"],
   },
   {
-    id: 14,
+    id: 16,
     name: "Product information management system for Tier 1 telco operator",
     category: "data management",
     complexity: 3,
     tags: ["Oracle", "PL/SQL", "Pentaho"],
   },
   {
-    id: 15,
+    id: 17,
     name: "Data management platform for personalized ads",
     category: "data management",
     complexity: 3,
     tags: ["Next.js", "PHP", "Oracle"],
   },
   {
-    id: 16,
+    id: 18,
     name: "VR LBE arenas management platform development",
     category: "software development",
     complexity: 2,
     tags: ["Next.js", "Node.js", "PostgreSQL"],
   },
   {
-    id: 17,
+    id: 19,
     name: "VR Tennis Esports tournaments and players management platform",
     category: "software development",
     complexity: 3,
     tags: ["Next.js", "Node.js", "PostgreSQL", "Python"],
   },
   {
-    id: 18,
+    id: 20,
     name: "VR motion learning data analysis and visualization platform",
     category: "data management",
     complexity: 2,
     tags: ["python", "pandas", "numpy", "matplotlib", "seaborn"],
   },
   {
-    id: 19,
+    id: 21,
     name: "Data-driven digital content production platform AVICA",
     category: "software development",
     complexity: 3,
     tags: ["Next.js", "Node.js", "PostgreSQL", "FFMPEG"],
   },
   {
-    id: 20,
+    id: 22,
     name: "Generative AI UGC platform for events SPARKBITS",
     category: "AI tools",
     complexity: 2,
     tags: ["AI", "Next.js", "Node.js", "PostgreSQL", "AI SDK"],
   },
   {
-    id: 21,
+    id: 23,
     name: "Digital content production AI assistant",
     category: "AI tools",
     complexity: 3,
     tags: ["AI", "Next.js", "Node.js", "PostgreSQL", "FFMPEG"],
   },
   {
-    id: 22,
+    id: 24,
     name: "CRM AI-assistant solution MVP",
     category: "AI tools",
     complexity: 2,
     tags: ["AI", "Next.js", "Node.js", "PostgreSQL", "AI SDK"],
   },
   {
-    id: 23,
+    id: 25,
     name: "Transportation and access-cards management solution",
     category: "software development",
     complexity: 2,
     tags: ["Next.js", "Expo", "PostgreSQL", "Card readers"],
   },
   {
-    id: 24,
+    id: 26,
     name: "truffalo.ai - AI-native business operating system",
     category: "AI tools",
     complexity: 3,
-    tags: ["AI", "Next.js", "Node.js", "PostgreSQL", "AI SDK", "Agents"],
+    tags: ["AI", "Agentic AI", "Context Graphs", "AI-native OS"],
   },
-];
+]
 
 export type Company = {
-  name: string;
-  url?: string;
-  role: string;
-  from: string;
-  to: string; // year or "Present"
-};
+  name: string
+  url?: string
+  role: string
+  from: string
+  to: string // year or "Present"
+}
 
 export const companies: Company[] = [
   {
@@ -299,14 +313,14 @@ export const companies: Company[] = [
     from: "1999",
     to: "2004",
   },
-];
+]
 
 export type Education = {
-  school: string;
-  credential: string;
-  period: string;
-  detail: string;
-};
+  school: string
+  credential: string
+  period: string
+  detail: string
+}
 
 export const education: Education[] = [
   {
@@ -323,9 +337,9 @@ export const education: Education[] = [
     detail:
       "Postgraduate research in Theoretical Physics (Field Theory methods in Surface Science and Non-equilibrium Thermodynamics)",
   },
-];
+]
 
-export type Course = { name: string };
+export type Course = { name: string }
 
 export const courses: Course[] = [
   { name: "IBM Project Management" },
@@ -343,4 +357,4 @@ export const courses: Course[] = [
   { name: "DL tools" },
   { name: "Prompting techniques" },
   { name: "LangChain & RAG" },
-];
+]
