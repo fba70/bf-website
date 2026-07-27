@@ -16,6 +16,18 @@ export const skills: SkillGroup[] = [
     items: ["Business Concepts", "Product Concepts", "IT Strategies"],
   },
   {
+    category: "Telecom",
+    items: ["BSS", "OSS", "Products", "Data management"],
+  },
+  {
+    category: "Enterprize operations",
+    items: ["Operational effectiveness", "Data management"],
+  },
+  {
+    category: "M&A support",
+    items: ["Concepts", "Management", "Migration & consolidation"],
+  },
+  {
     category: "Architectures",
     items: ["Software Solutions", "Data Management", "System Design"],
   },
