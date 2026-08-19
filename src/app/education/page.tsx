@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 export const metadata: Metadata = {
   title: "Education",
   description: "Degrees, courses, and milestones along the way.",
+  alternates: { canonical: "/education" },
 }
 
 export default function EducationPage() {

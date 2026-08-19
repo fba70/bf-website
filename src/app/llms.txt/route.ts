@@ -2,6 +2,7 @@ import { siteConfig } from "@/lib/site";
 import { navItems } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
 import { projects, skills, courses, companies } from "@/lib/content";
+import { getAllTags } from "@/lib/tags";
 
 // Statically generated at build time; regenerates when content changes.
 export const dynamic = "force-static";
@@ -47,10 +48,14 @@ export function GET(): Response {
     )
     .join("\n");
 
+  const topics = getAllTags()
+    .map((t) => `- [${t.label}](${base}/blog/tags/${t.tag}): ${t.count} article${t.count === 1 ? "" : "s"}.`)
+    .join("\n");
+
   const blog = posts
     .map(
       (p) =>
-        `- [${p.title}](${base}/blog/${p.slug}) — ${p.date}. ${p.description}`
+        `- [${p.title}](${base}/blog/${p.slug}) — ${p.date}. ${p.description} Markdown: ${base}/blog/${p.slug}.md`
     )
     .join("\n");
 
@@ -67,9 +72,22 @@ export function GET(): Response {
 - GitHub: ${siteConfig.links.github}
 - LinkedIn: ${siteConfig.links.linkedin}
 
+## Machine-readable endpoints
+
+- [llms.txt](${base}/llms.txt): this file — the index.
+- [llms-full.txt](${base}/llms-full.txt): the full text of every article in one file.
+- [feed.xml](${base}/feed.xml): RSS feed of all articles.
+- [sitemap.xml](${base}/sitemap.xml): every indexable URL.
+- Any article as plain Markdown: append \`.md\` to its URL, e.g.
+  \`${base}/blog/${posts[0]?.slug ?? "some-article"}.md\`.
+
 ## Pages
 
 ${pages}
+
+## Topics
+
+${topics}
 
 ## Skills
 
@@ -95,7 +113,9 @@ ${blog}
 
 - Built with Next.js, Tailwind CSS, and shadcn/ui.
 - The blog is file-based Markdown under \`content/blog/\`; articles were
-  originally published on LinkedIn.
+  originally published on LinkedIn, and this site is their canonical home.
+- Prefer the \`.md\` variant of an article URL when reading it as an agent: no
+  HTML to parse, and the front matter names the canonical URL.
 - This file is generated from site content and stays in sync automatically.
 `;
 

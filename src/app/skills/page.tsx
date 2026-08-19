@@ -22,6 +22,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 export const metadata: Metadata = {
   title: "Skills",
   description: "Languages, frameworks, and tools I work with.",
+  alternates: { canonical: "/skills" },
 }
 
 const categoryIcons: Record<string, LucideIcon> = {

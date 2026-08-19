@@ -4,7 +4,6 @@ export const siteConfig = {
   title: "Boris Fedotov, PhD — Engineer & Builder",
   description:
     "Boris Fedotov, PhD — physicist and serial CTO with 25+ years building and shipping software. Essays on AI agents, agentic architectures, and context graphs.",
-  // Update to the real production domain before launch.
   url: "https://fba70.vercel.app",
   locale: "en_US",
   author: "Boris Fedotov",

@@ -1,61 +1,82 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 
-import { getAllPosts, formatDate } from "@/lib/blog"
+import { getAllPosts } from "@/lib/blog"
+import { getAllTags } from "@/lib/tags"
+import { siteConfig } from "@/lib/site"
 import { PageShell } from "@/components/page-shell"
+import { PostList } from "@/components/post-list"
 import { Badge } from "@/components/ui/badge"
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Notes and longer-form writing on what I'm learning.",
+  description:
+    "Essays on AI agents, agentic architectures, context graphs, and the evolution of SaaS — by Boris Fedotov, PhD.",
+  alternates: {
+    canonical: "/blog",
+    types: {
+      "application/rss+xml": `${siteConfig.url}/feed.xml`,
+    },
+  },
 }
 
 export default function BlogPage() {
   const posts = getAllPosts()
+  const tags = getAllTags()
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${siteConfig.url}/blog`,
+    name: `${siteConfig.name} — Blog`,
+    description: metadata.description,
+    url: `${siteConfig.url}/blog`,
+    inLanguage: "en",
+    author: {
+      "@type": "Person",
+      name: siteConfig.author,
+      url: siteConfig.url,
+    },
+    blogPost: posts.map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.description,
+      datePublished: post.date,
+      url: `${siteConfig.url}/blog/${post.slug}`,
+      keywords: post.tags,
+    })),
+  }
 
   return (
     <PageShell
       title="Blog"
       lead="Some of my articles originally posted on LinkedIn"
     >
-      {posts.length === 0 ? (
-        <p className="text-muted-foreground">No posts yet — check back soon.</p>
-      ) : (
-        <ul className="flex flex-col divide-y divide-border/60">
-          {posts.map((post) => (
-            <li key={post.slug} className="py-6 first:pt-0">
-              <article className="group">
-                <Link href={`/blog/${post.slug}`} className="block">
-                  <div className="flex flex-wrap items-baseline justify-between gap-2">
-                    <h2 className="text-xl font-semibold tracking-tight group-hover:text-primary">
-                      {post.title}
-                    </h2>
-                    <time
-                      dateTime={post.date}
-                      className="font-mono text-xs text-muted-foreground"
-                    >
-                      {formatDate(post.date)}
-                    </time>
-                  </div>
-                  <p className="mt-2 text-muted-foreground">
-                    {post.description}
-                  </p>
-                </Link>
-                <div className="mt-3 flex flex-wrap items-center gap-2">
-                  <span className="text-xs text-muted-foreground">
-                    {post.readingTime} min read
-                  </span>
-                  {post.tags?.map((tag) => (
-                    <Badge key={tag} variant="secondary">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </article>
-            </li>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      {tags.length > 0 ? (
+        <nav
+          aria-label="Browse by topic"
+          className="mb-10 flex flex-wrap items-center gap-2"
+        >
+          <span className="mr-1 text-xs text-muted-foreground">Topics:</span>
+          {tags.slice(0, 12).map((tag) => (
+            <Badge key={tag.tag} asChild variant="secondary">
+              <Link href={`/blog/tags/${tag.tag}`}>
+                {tag.label} ({tag.count})
+              </Link>
+            </Badge>
           ))}
-        </ul>
-      )}
+          <Badge asChild variant="outline">
+            <Link href="/blog/tags">All topics →</Link>
+          </Badge>
+        </nav>
+      ) : null}
+
+      <PostList posts={posts} />
     </PageShell>
   )
 }

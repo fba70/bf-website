@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 export const metadata: Metadata = {
   title: "Companies",
   description: "Companies I've founded and worked with over the years.",
+  alternates: { canonical: "/companies" },
 };
 
 function hostname(url: string): string {

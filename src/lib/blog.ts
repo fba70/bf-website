@@ -8,8 +8,11 @@ export type PostFrontmatter = {
   title: string;
   description: string;
   date: string; // ISO string, e.g. "2025-06-01"
+  updated?: string; // ISO string; falls back to `date` when absent
   tags?: string[];
   draft?: boolean;
+  /** Where the article first appeared, e.g. the original LinkedIn URL. */
+  source?: string;
 };
 
 export type PostMeta = PostFrontmatter & {
@@ -18,6 +21,18 @@ export type PostMeta = PostFrontmatter & {
 };
 
 export type Post = PostMeta & { content: string };
+
+/**
+ * Most articles open with "Originally published on [LinkedIn](url)". Pulling
+ * that URL out lets the structured data name the original, so search engines
+ * treat this page as the canonical home rather than as a copy.
+ */
+function findSourceUrl(content: string): string | undefined {
+  const match = content.match(
+    /originally published on \[[^\]]*\]\((https?:\/\/[^)\s]+)\)/i
+  );
+  return match?.[1];
+}
 
 function readingTime(content: string): number {
   const words = content.trim().split(/\s+/).length;
@@ -51,8 +66,10 @@ export function getPost(slug: string): Post | null {
     title: fm.title ?? slug,
     description: fm.description ?? "",
     date: fm.date ?? "",
+    updated: fm.updated ?? fm.date ?? "",
     tags: fm.tags ?? [],
     draft: fm.draft ?? false,
+    source: fm.source ?? findSourceUrl(content),
     readingTime: readingTime(content),
     content,
   };

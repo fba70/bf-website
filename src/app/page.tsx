@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -8,11 +9,21 @@ import {
   Building2,
   GraduationCap,
   PenLine,
+  GlobeCheck
 } from "lucide-react";
 
 import { siteConfig } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+    types: {
+      "application/rss+xml": `${siteConfig.url}/feed.xml`,
+    },
+  },
+}
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -93,10 +104,18 @@ export default function HomePage() {
             years experience who architects software solutions, drives teams and
             ships the code to my own and customer projects
           </p>
+          <p className="mt-5 max-w-2xl text-lg text-muted-foreground sm:text-xl">
+            As a solo engineer I bring to the table the right mix of management, analytical, architecture and software development skills.
+          </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild>
               <a href={`mailto:${siteConfig.email}`}>
                 <Mail className="h-4 w-4" /> Contact me
+              </a>
+            </Button>
+            <Button asChild>
+              <a href="https://www.linkedin.com/in/bfedotov/" target="_blank" rel="noopener noreferrer">
+                <GlobeCheck className="h-4 w-4" /> LinkedIn
               </a>
             </Button>
             <Button asChild variant="secondary">
@@ -120,16 +139,11 @@ export default function HomePage() {
           happen
         </p>
       </section>
-      <section className="pb-8">
+      <section className="pb-14">
         <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-muted-foreground">
           Since 2015 I live and work in Vienna, Austria. Always happy to talk to
           friends, partners and new contacts in Europe, US and Middle East about
-          projects and interesting ideas
-        </p>
-      </section>
-      <section className="pb-16">
-        <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-muted-foreground">
-          Get in touch with me via email or LinkedIn if you think I could be
+          projects and interesting ideas. Get in touch with me via email or LinkedIn if you think I could be
           helpful for your project or if you want to discuss a potential
           collaboration
         </p>

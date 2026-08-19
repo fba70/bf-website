@@ -46,8 +46,15 @@ export const metadata: Metadata = {
     "AI engineering",
     "blog",
   ],
-  authors: [{ name: siteConfig.author }],
+  authors: [{ name: siteConfig.author, url: siteConfig.url }],
   creator: siteConfig.author,
+  // No `canonical` here on purpose: metadata is inherited, so a canonical set
+  // on the root layout would point every page at the home page.
+  alternates: {
+    types: {
+      "application/rss+xml": `${siteConfig.url}/feed.xml`,
+    },
+  },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,

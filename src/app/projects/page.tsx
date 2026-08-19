@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 export const metadata: Metadata = {
   title: "Projects",
   description: "A selection of things I've designed, built, and shipped.",
+  alternates: { canonical: "/projects" },
 }
 
 const categoryStyles: Record<ProjectCategory, string> = {
