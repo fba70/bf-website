@@ -102,7 +102,10 @@ export default function HomePage() {
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground sm:text-xl">
             I&apos;m PhD physicist, serial CTO and project manager with 25+
             years experience who architects software solutions, drives teams and
-            ships the code to my own and customer projects
+            ships the code to my own and customer projects.
+          </p>
+          <p className="mt-5 max-w-2xl text-lg text-muted-foreground sm:text-xl">
+            I worked with large international enterprise cients (TELE2, France Telecom, Telstra, Orange, UPC, several major banks) as well as with many SMBs in different business domains.
           </p>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground sm:text-xl">
             As a solo engineer I bring to the table the right mix of management, analytical, architecture and software development skills.

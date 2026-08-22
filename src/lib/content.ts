@@ -265,6 +265,13 @@ export const projects: Project[] = [
     complexity: 3,
     tags: ["AI", "Agentic AI", "Context Graphs", "AI-native OS"],
   },
+  {
+    id: 27,
+    name: "Telco Product Management solution migration",
+    category: "software development",
+    complexity: 2,
+    tags: ["Telco product catalog", "Data management", "ETL"],
+  },
 ]
 
 export type Company = {
