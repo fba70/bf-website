@@ -105,7 +105,7 @@ export default function HomePage() {
             ships the code to my own and customer projects.
           </p>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            I worked with large international enterprise cients (TELE2, France Telecom, Telstra, Orange, UPC, several major banks) as well as with many SMBs in different business domains.
+            I worked with large international enterprise cients (TELE2, France Telecom, Telstra, Orange, UPC, several major banks) as well as with many SMBs in different business domains (travel, gaming, marketing, sales, media etc.).
           </p>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground sm:text-xl">
             As a solo engineer I bring to the table the right mix of management, analytical, architecture and software development skills.
