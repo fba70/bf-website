@@ -92,11 +92,11 @@ export default function HomePage() {
           width={1000}
           height={1000}
           priority
-          className="h-40 w-40 shrink-0 rounded-full border-4 border-border object-cover shadow-sm sm:h-56 sm:w-56"
+          className="h-40 w-40 shrink-0 rounded-full border-4 border-border object-cover shadow-sm sm:h-64 sm:w-64"
         />
         <div>
-          <p className="font-mono text-base text-primary">Hello, I&apos;m</p>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-6xl">
+          <p className="font-mono text-base text-primary">Hi, I&apos;m</p>
+          <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">
             {siteConfig.name}, PhD
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground sm:text-xl">
