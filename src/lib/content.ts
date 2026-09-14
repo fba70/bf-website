@@ -41,7 +41,7 @@ export const skills: SkillGroup[] = [
   },
   {
     category: "Backend",
-    items: ["Node.js", "PostgreSQL", "REST APIs", "Redis", "Inngest"],
+    items: ["Node.js", "PostgreSQL", "REST APIs", "Redis"],
   },
   {
     category: "Tooling & Cloud",
@@ -53,7 +53,7 @@ export const skills: SkillGroup[] = [
   },
   {
     category: "AI & ML",
-    items: ["Vercel AI SDK", "Vercel Chat SDK", "Vercel Workflows", "MCP/CLI"],
+    items: ["AI SDK", "Agentic harnesses", "Durable Workflows", "MCP/CLI"],
   },
   {
     category: "I speak",
@@ -272,6 +272,13 @@ export const projects: Project[] = [
     complexity: 2,
     tags: ["Telco product catalog", "Data management", "ETL"],
   },
+  {
+    id: 28,
+    name: "AI skills foundry and design assistant",
+    category: "software development",
+    complexity: 2,
+    tags: ["AI", "Skills", "Assistant"],
+  },
 ]
 
 export type Company = {
@@ -295,12 +302,12 @@ export const companies: Company[] = [
     url: "https://www.in4comgroup.com",
     role: "Co-founder & CTO",
     from: "2021",
-    to: "2026",
+    to: "Present",
   },
   {
     name: "Tennis Esports",
     url: "https://www.tennis-esports.com",
-    role: "Co-founder & CDO",
+    role: "CDO",
     from: "2019",
     to: "Present",
   },
