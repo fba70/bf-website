@@ -93,3 +93,13 @@ export function formatDate(date: string): string {
     day: "numeric",
   });
 }
+
+/** Compact form for card corners, e.g. "Sep 10, 2026". */
+export function formatDateShort(date: string): string {
+  if (!date) return "";
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+}

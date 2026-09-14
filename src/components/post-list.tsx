@@ -1,8 +1,9 @@
 import Link from "next/link";
 
-import { formatDate, type PostMeta } from "@/lib/blog";
+import { formatDateShort, type PostMeta } from "@/lib/blog";
 import { tagLabel } from "@/lib/tags";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function PostList({
   posts,
@@ -19,41 +20,53 @@ export function PostList({
   }
 
   return (
-    <ul className="flex flex-col divide-y divide-border/60">
+    <div className="grid gap-4 sm:grid-cols-2">
       {posts.map((post) => (
-        <li key={post.slug} className="py-6 first:pt-0">
-          <article className="group">
-            <Link href={`/blog/${post.slug}`} className="block">
-              <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <h2 className="text-xl font-semibold tracking-tight group-hover:text-primary">
+        <Card
+          key={post.slug}
+          className="group/post relative transition-colors hover:ring-foreground/25"
+        >
+          <CardHeader>
+            <div className="flex items-start justify-between gap-2">
+              <CardTitle>
+                {/* Stretched link — the whole card is the hit area. */}
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="transition-colors after:absolute after:inset-0 group-hover/post:text-primary"
+                >
                   {post.title}
-                </h2>
-                <time
-                  dateTime={post.date}
-                  className="font-mono text-xs text-muted-foreground"
-                >
-                  {formatDate(post.date)}
-                </time>
-              </div>
-              <p className="mt-2 text-muted-foreground">{post.description}</p>
-            </Link>
-            <div className="mt-3 flex flex-wrap items-center gap-2">
-              <span className="text-xs text-muted-foreground">
-                {post.readingTime} min read
-              </span>
-              {post.tags?.map((tag) => (
-                <Badge
-                  key={tag}
-                  asChild
-                  variant={tag === activeTag ? "default" : "secondary"}
-                >
-                  <Link href={`/blog/tags/${tag}`}>{tagLabel(tag)}</Link>
-                </Badge>
-              ))}
+                </Link>
+              </CardTitle>
+              <time
+                dateTime={post.date}
+                className="shrink-0 font-mono text-xs text-muted-foreground"
+              >
+                {formatDateShort(post.date)}
+              </time>
             </div>
-          </article>
-        </li>
+          </CardHeader>
+
+          <CardContent className="text-sm text-muted-foreground">
+            {post.description}
+          </CardContent>
+
+          {/* Above the stretched link, so the tag links stay clickable. */}
+          <CardContent className="relative z-10 mt-auto flex flex-wrap items-center gap-2">
+            <span className="text-xs text-muted-foreground">
+              {post.readingTime} min read
+            </span>
+            {post.tags?.map((tag) => (
+              <Badge
+                key={tag}
+                asChild
+                variant={tag === activeTag ? "default" : "secondary"}
+              >
+                <Link href={`/blog/tags/${tag}`}>{tagLabel(tag)}</Link>
+              </Badge>
+            ))}
+          </CardContent>
+        </Card>
       ))}
-    </ul>
+    </div>
   );
 }
