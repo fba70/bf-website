@@ -1,6 +1,7 @@
 ---
 title: "Software Got Cheap to Build. Now What?"
 description: "AI cut the cost of shipping a product by orders of magnitude — for you and for the ten thousand companies next to you. So what's your business model, startup?"
+description_de: "KI hat die Kosten, ein Produkt auszuliefern, um Größenordnungen gesenkt, für Sie und für die zehntausend Unternehmen neben Ihnen. Wie sieht also Ihr Geschäftsmodell aus, Startup?"
 date: "2026-08-26"
 tags: ["startups", "saas", "strategy", "ai"]
 ---

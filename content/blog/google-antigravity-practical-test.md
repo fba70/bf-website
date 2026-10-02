@@ -1,6 +1,7 @@
 ---
 title: "Google Antigravity Practical Test: What Worked and What Didn't"
 description: "A hands-on test of Google Antigravity — a next-generation IDE combining editor, agent manager, Gemini CLI and a browser sandbox."
+description_de: "Ein Praxistest von Google Antigravity, einer IDE der nächsten Generation, die Editor, Agent Manager, Gemini CLI und eine Browser-Sandbox vereint."
 date: "2026-02-03"
 tags: ["ai-coding", "developer-tools", "review"]
 ---

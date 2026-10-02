@@ -1,6 +1,7 @@
 ---
 title: "Beyond \"Vibe Coding\": Why We Need an Agentic Kanban for Team-Based AI Development"
 description: "The future of software isn't a smarter text editor — it's a digital assembly line where humans manage and AI executes."
+description_de: "Die Zukunft der Software ist nicht ein klügerer Texteditor, sondern ein digitales Fließband, auf dem Menschen steuern und KI ausführt."
 date: "2026-01-19"
 tags: ["ai-coding", "agentic", "teams"]
 ---

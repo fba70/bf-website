@@ -1,6 +1,7 @@
 ---
 title: "The Industrialization of AI Agency: From \"Copilots\" to \"Digital Assembly Lines\""
 description: "If 2024 was the year of the chatbot and 2025 the prototype, 2026 has ushered in agentic industrialization."
+description_de: "War 2024 das Jahr des Chatbots und 2025 das des Prototyps, so hat 2026 die agentische Industrialisierung eingeläutet."
 date: "2026-01-14"
 tags: ["ai-agents", "automation"]
 ---

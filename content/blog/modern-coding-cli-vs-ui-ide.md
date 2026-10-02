@@ -1,6 +1,7 @@
 ---
 title: "Modern Coding: CLI vs. UI IDE"
 description: "A fascinating paradox: as consumer tech becomes more visual, pro-level coding seems to run the opposite way."
+description_de: "Ein faszinierendes Paradox: Während Consumer-Technik immer visueller wird, scheint professionelles Coding den entgegengesetzten Weg zu gehen."
 date: "2026-01-12"
 tags: ["ai-coding", "developer-tools", "cli"]
 ---

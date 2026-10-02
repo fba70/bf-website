@@ -1,6 +1,7 @@
 ---
 title: "Enterprises in the Age of Agentic Reasoning and Context Graphs"
 description: "For decades we built corporate software focused on one thing: keeping a record. The next era is about reasoning over context."
+description_de: "Jahrzehntelang haben wir Unternehmenssoftware gebaut, die vor allem eines tut: Daten festhalten. In der nächsten Ära geht es um Schlussfolgern auf Basis von Kontext."
 date: "2026-04-08"
 tags: ["context-graph", "ai-agents", "enterprise", "architecture"]
 ---

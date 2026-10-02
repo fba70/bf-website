@@ -1,6 +1,7 @@
 ---
 title: "Context Graph as a Subject of R&D"
 description: "Notes on the technical side and business application of the context graph concept, and where the open research questions are."
+description_de: "Anmerkungen zur technischen Seite und zur geschäftlichen Anwendung des Context-Graph-Konzepts sowie zu den offenen Forschungsfragen."
 date: "2026-03-18"
 tags: ["context-graph", "research", "r-and-d"]
 ---

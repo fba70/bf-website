@@ -1,6 +1,7 @@
 ---
 title: "Digital Product Content Management Done Right"
 description: "Is digital product content management done right in large enterprises? An attempt to answer."
+description_de: "Wird das digitale Produktcontent-Management in Großunternehmen richtig gemacht? Ein Antwortversuch."
 date: "2022-04-20"
 tags: ["pim", "content", "enterprise"]
 ---

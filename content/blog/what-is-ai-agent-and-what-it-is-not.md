@@ -1,6 +1,7 @@
 ---
 title: "What is AI-agent (and what it is not)?"
 description: "The agent isn't the model, the memory, or the tools. It's the rules and context — everything else is replaceable infrastructure."
+description_de: "Der Agent ist weder das Modell noch der Speicher noch die Tools. Er besteht aus Regeln und Kontext, alles andere ist austauschbare Infrastruktur."
 date: "2026-06-25"
 tags: ["ai", "ai-agents", "enterprise"]
 ---

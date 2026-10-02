@@ -1,6 +1,7 @@
 ---
 title: "The \"Agent Storm\" is Coming: The Internet Will Get Worse Before It Gets Better"
 description: "We're stepping over the threshold into a new internet era — and it will get messier before it improves."
+description_de: "Wir treten über die Schwelle in eine neue Internet-Ära, und es wird zunächst chaotischer, bevor es besser wird."
 date: "2026-01-16"
 tags: ["ai-agents", "internet"]
 ---

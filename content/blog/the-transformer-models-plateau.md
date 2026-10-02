@@ -1,6 +1,7 @@
 ---
 title: "The Transformer Models Plateau: The \"Bigger is Better\" Era is Ending"
 description: "For years experts argued that scaling alone is a dead end. That debate is effectively over — what comes next?"
+description_de: "Jahrelang meinten Experten, Skalierung allein sei eine Sackgasse. Diese Debatte ist praktisch beendet. Was kommt als Nächstes?"
 date: "2026-01-24"
 tags: ["ai", "models", "research"]
 ---

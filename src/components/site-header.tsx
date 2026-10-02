@@ -7,9 +7,11 @@ import { usePathname } from "next/navigation"
 import { Mail, Menu } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { navItems, siteConfig } from "@/lib/site"
+import { navItems, siteConfig, type NavKey } from "@/lib/site"
+import { localePath, stripLocale, type Locale } from "@/lib/i18n"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
+import { LanguageSwitch } from "@/components/language-switch"
 import {
   Sheet,
   SheetContent,
@@ -23,15 +25,29 @@ function isActive(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`)
 }
 
-export function SiteHeader() {
-  const pathname = usePathname()
+export type HeaderLabels = Record<NavKey, string> & {
+  contact: string
+  openMenu: string
+  toggleTheme: string
+  language: string
+}
+
+export function SiteHeader({
+  locale,
+  labels,
+}: {
+  locale: Locale
+  labels: HeaderLabels
+}) {
+  // Compare against the path without a locale prefix (see LanguageSwitch).
+  const pathname = stripLocale(usePathname() ?? "/")
   const [open, setOpen] = React.useState(false)
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between gap-4 px-4 sm:px-6">
         <Link
-          href="/"
+          href={localePath(locale, "/")}
           className="flex items-center gap-2 font-semibold tracking-tight"
         >
           <Image
@@ -49,7 +65,7 @@ export function SiteHeader() {
           {navItems.map((item) => (
             <Link
               key={item.href}
-              href={item.href}
+              href={localePath(locale, item.href)}
               className={cn(
                 "rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-foreground",
                 isActive(pathname, item.href)
@@ -57,7 +73,7 @@ export function SiteHeader() {
                   : "text-muted-foreground",
               )}
             >
-              {item.title}
+              {labels[item.key]}
             </Link>
           ))}
         </nav>
@@ -66,11 +82,13 @@ export function SiteHeader() {
           <Button asChild size="sm" className="mr-1">
             <a href={`mailto:${siteConfig.email}`}>
               <Mail className="h-4 w-4" />
-              <span className="hidden sm:inline">Contact me</span>
+              <span className="hidden sm:inline">{labels.contact}</span>
             </a>
           </Button>
 
-          <ModeToggle />
+          <LanguageSwitch locale={locale} label={labels.language} />
+
+          <ModeToggle label={labels.toggleTheme} />
 
           {/* Mobile menu */}
           <Sheet open={open} onOpenChange={setOpen}>
@@ -79,7 +97,7 @@ export function SiteHeader() {
                 variant="ghost"
                 size="icon"
                 className="md:hidden"
-                aria-label="Open menu"
+                aria-label={labels.openMenu}
               >
                 <Menu className="h-5 w-5" />
               </Button>
@@ -92,7 +110,7 @@ export function SiteHeader() {
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
-                    href={item.href}
+                    href={localePath(locale, item.href)}
                     onClick={() => setOpen(false)}
                     className={cn(
                       "rounded-md px-3 py-2 text-base font-medium transition-colors hover:bg-accent/40",
@@ -101,7 +119,7 @@ export function SiteHeader() {
                         : "text-muted-foreground",
                     )}
                   >
-                    {item.title}
+                    {labels[item.key]}
                   </Link>
                 ))}
               </nav>

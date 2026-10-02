@@ -1,6 +1,7 @@
 ---
 title: "The Death of Syntax: Why the Future of Coding is About Context Engineering"
 description: "For decades the tax on software engineering has been syntax. The future of coding is about context, not semicolons."
+description_de: "Jahrzehntelang war Syntax die Steuer auf Software Engineering. Die Zukunft des Codings dreht sich um Kontext, nicht um Semikolons."
 date: "2026-01-20"
 tags: ["ai-coding", "context-engineering", "developer-tools"]
 ---

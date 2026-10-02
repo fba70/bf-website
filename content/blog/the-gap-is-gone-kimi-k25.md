@@ -1,6 +1,7 @@
 ---
 title: "The Gap is Gone: Kimi K2.5 Proves Open Source Has Caught Up"
 description: "We've spent two years asking how far behind open source is. With Moonshot AI's Kimi K2.5, the answer may have changed."
+description_de: "Zwei Jahre lang haben wir gefragt, wie weit Open Source zurückliegt. Mit Kimi K2.5 von Moonshot AI könnte sich die Antwort geändert haben."
 date: "2026-01-28"
 tags: ["ai", "open-source", "models"]
 ---

@@ -1,6 +1,7 @@
 ---
 title: "The End of the \"App Era\": Will AI Redefine the Interface of the Internet?"
 description: "We've lived in the Golden Age of the App. AI may be about to redefine the interface of the internet itself."
+description_de: "Wir haben im goldenen Zeitalter der App gelebt. KI könnte nun die Schnittstelle des Internets selbst neu definieren."
 date: "2026-02-05"
 tags: ["ai", "internet", "ux"]
 ---

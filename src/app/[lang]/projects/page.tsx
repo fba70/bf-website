@@ -1,14 +1,23 @@
 import type { Metadata } from "next"
 
-import { projects, type ProjectCategory } from "@/lib/content"
+import { projects, projectTag, type ProjectCategory } from "@/lib/content"
+import { getDictionary } from "@/lib/dictionaries"
+import { pageAlternates, tr } from "@/lib/i18n"
+import { getLocale, type LangParams } from "@/lib/locale-params"
 import { PageShell } from "@/components/page-shell"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-export const metadata: Metadata = {
-  title: "Projects",
-  description: "A selection of things I've designed, built, and shipped.",
-  alternates: { canonical: "/projects" },
+type Props = { params: Promise<LangParams> }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const locale = await getLocale(params)
+  const t = getDictionary(locale).projects
+  return {
+    title: t.title,
+    description: t.description,
+    alternates: pageAlternates(locale, "/projects"),
+  }
 }
 
 const categoryStyles: Record<ProjectCategory, string> = {
@@ -22,13 +31,15 @@ const categoryStyles: Record<ProjectCategory, string> = {
     "border-transparent bg-amber-500/10 text-amber-600 dark:text-amber-400",
 }
 
-const levelLabel: Record<1 | 2 | 3, string> = {
-  1: "Low",
-  2: "Medium",
-  3: "High",
-}
-
-function LevelMeter({ label, level }: { label: string; level: 1 | 2 | 3 }) {
+function LevelMeter({
+  label,
+  level,
+  levelLabel,
+}: {
+  label: string
+  level: 1 | 2 | 3
+  levelLabel: Record<1 | 2 | 3, string>
+}) {
   return (
     <div className="flex items-center justify-between gap-3">
       <span className="text-muted-foreground">{label}</span>
@@ -51,12 +62,12 @@ function LevelMeter({ label, level }: { label: string; level: 1 | 2 | 3 }) {
   )
 }
 
-export default function ProjectsPage() {
+export default async function ProjectsPage({ params }: Props) {
+  const locale = await getLocale(params)
+  const t = getDictionary(locale).projects
+
   return (
-    <PageShell
-      title="Projects"
-      lead="A selection of projects and solutions I've led, designed, developed or delivered"
-    >
+    <PageShell title={t.title} lead={t.lead}>
       <div className="grid gap-4 sm:grid-cols-2">
         {[...projects].reverse().map((project) => (
           <Card key={project.id} className="flex flex-col">
@@ -64,19 +75,23 @@ export default function ProjectsPage() {
               <Badge
                 className={`w-fit capitalize ${categoryStyles[project.category]}`}
               >
-                {project.category}
+                {t.categories[project.category]}
               </Badge>
               <CardTitle className="text-base leading-snug">
-                {project.name}
+                {tr(project.name, locale)}
               </CardTitle>
             </CardHeader>
             <CardContent className="mt-auto flex flex-col gap-3 text-sm">
-              <LevelMeter label="Complexity" level={project.complexity} />
+              <LevelMeter
+                label={t.complexity}
+                level={project.complexity}
+                levelLabel={t.levels}
+              />
               {project.tags.length > 0 ? (
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <Badge key={tag} variant="outline">
-                      {tag}
+                      {projectTag(tag, locale)}
                     </Badge>
                   ))}
                 </div>

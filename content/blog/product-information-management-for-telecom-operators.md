@@ -1,6 +1,7 @@
 ---
 title: "Product Information Management for Telecom Operators"
 description: "Large BSS/OSS vendors offer enterprise product catalog solutions — but PIM for telecom has its own challenges."
+description_de: "Große BSS/OSS-Anbieter bieten Enterprise-Produktkatalog-Lösungen an, doch PIM für Telekommunikation hat eigene Herausforderungen."
 date: "2022-03-28"
 tags: ["pim", "telecom", "bss-oss"]
 ---

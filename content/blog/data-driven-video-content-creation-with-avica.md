@@ -1,6 +1,7 @@
 ---
 title: "Data-Driven Video Content Creation with AVICA"
 description: "The past decade was driven by AI tooling and finding applications for it. AVICA applies that to video content."
+description_de: "Das vergangene Jahrzehnt war geprägt von KI-Werkzeugen und der Suche nach ihren Anwendungen. AVICA wendet sie auf Videoinhalte an."
 date: "2024-05-22"
 tags: ["avica", "video", "data"]
 ---

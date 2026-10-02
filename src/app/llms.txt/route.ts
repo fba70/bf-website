@@ -2,6 +2,8 @@ import { siteConfig } from "@/lib/site";
 import { navItems } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
 import { projects, skills, courses, companies } from "@/lib/content";
+import { getDictionary } from "@/lib/dictionaries";
+import { tr } from "@/lib/i18n";
 import { getAllTags } from "@/lib/tags";
 
 // Statically generated at build time; regenerates when content changes.
@@ -10,19 +12,20 @@ export const dynamic = "force-static";
 export function GET(): Response {
   const base = siteConfig.url.replace(/\/$/, "");
   const posts = getAllPosts();
+  const t = getDictionary("en");
 
   const pages = navItems
     .map((item) => {
       const url = `${base}${item.href === "/" ? "" : item.href}`;
       const labels: Record<string, string> = {
-        Home: "Intro, overview, and links.",
-        Skills: "Science, management, architecture, and engineering skills.",
-        Projects: "Programs and solutions led, designed, and delivered.",
-        Companies: "Companies founded and worked with.",
-        Education: "Degrees and software/IT courses.",
-        Blog: "Essays, originally published on LinkedIn.",
+        home: "Intro, overview, and links.",
+        skills: "Science, management, architecture, and engineering skills.",
+        projects: "Programs and solutions led, designed, and delivered.",
+        companies: "Companies founded and worked with.",
+        education: "Degrees and software/IT courses.",
+        blog: "Essays, originally published on LinkedIn.",
       };
-      return `- [${item.title}](${url}): ${labels[item.title] ?? ""}`;
+      return `- [${t.nav[item.key]}](${url}): ${labels[item.key] ?? ""}`;
     })
     .join("\n");
 
@@ -32,19 +35,22 @@ export function GET(): Response {
     projects
       .slice(-8)
       .reverse()
-      .map((p) => `- ${p.name} (${p.category})`)
+      .map((p) => `- ${tr(p.name, "en")} (${p.category})`)
       .join("\n");
 
   const skillsSummary = skills
-    .map((g) => `- ${g.category}: ${g.items.join(", ")}`)
+    .map(
+      (g) =>
+        `- ${tr(g.category, "en")}: ${g.items.map((i) => tr(i, "en")).join(", ")}`
+    )
     .join("\n");
 
-  const coursesSummary = courses.map((c) => c.name).join(", ");
+  const coursesSummary = courses.map((c) => tr(c.name, "en")).join(", ");
 
   const companiesSummary = companies
     .map(
       (c) =>
-        `- ${c.name}${c.url ? ` (${c.url})` : ""} — ${c.role}, ${c.from}–${c.to}`
+        `- ${c.name}${c.url ? ` (${c.url})` : ""} — ${tr(c.role, "en")}, ${c.from}–${c.to ?? "Present"}`
     )
     .join("\n");
 
@@ -78,6 +84,7 @@ export function GET(): Response {
 - [llms-full.txt](${base}/llms-full.txt): the full text of every article in one file.
 - [feed.xml](${base}/feed.xml): RSS feed of all articles.
 - [sitemap.xml](${base}/sitemap.xml): every indexable URL.
+- German version of the site pages: ${base}/de (articles are English only).
 - Any article as plain Markdown: append \`.md\` to its URL, e.g.
   \`${base}/blog/${posts[0]?.slug ?? "some-article"}.md\`.
 

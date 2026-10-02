@@ -1,6 +1,7 @@
 ---
 title: "Is Markdown the New Information Exchange Format for AI Agents?"
 description: "A question that touches the evolving architecture of AI systems. The short answer: yes and no."
+description_de: "Eine Frage, die die sich entwickelnde Architektur von KI-Systemen berührt. Die kurze Antwort: Ja und nein."
 date: "2026-01-30"
 tags: ["ai-agents", "markdown", "architecture"]
 ---

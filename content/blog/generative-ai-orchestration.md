@@ -1,6 +1,7 @@
 ---
 title: "Generative AI Orchestration"
 description: "A follow-up to \"Video content creation prosumer platform\" on orchestrating generative AI pipelines."
+description_de: "Eine Fortsetzung von \"Video content creation prosumer platform\" zur Orchestrierung generativer KI-Pipelines."
 date: "2024-07-01"
 tags: ["generative-ai", "orchestration", "content"]
 ---

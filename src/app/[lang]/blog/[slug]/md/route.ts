@@ -1,7 +1,9 @@
 import { getAllPosts, getPost } from "@/lib/blog";
 import { toMarkdownDocument } from "@/lib/markdown-export";
 
-// Prerendered at build time, one file per post.
+// Prerendered at build time, one file per post. Served at /blog/<slug>.md
+// through the rewrite in next.config.ts. Articles are English only, so the
+// `lang` segment does not change the output.
 export const dynamic = "force-static";
 
 export function generateStaticParams() {
@@ -10,7 +12,7 @@ export function generateStaticParams() {
 
 export async function GET(
   _request: Request,
-  { params }: { params: Promise<{ slug: string }> },
+  { params }: { params: Promise<{ lang: string; slug: string }> },
 ): Promise<Response> {
   const { slug } = await params;
   const post = getPost(slug);

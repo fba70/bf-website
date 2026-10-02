@@ -1,6 +1,7 @@
 ---
 title: "Continuous Storytelling in the Metaverse"
 description: "The Metaverse as a metaphor for extending the internet as a computing platform through a synergy of technologies."
+description_de: "Das Metaverse als Metapher für die Erweiterung des Internets zur Computing-Plattform durch das Zusammenspiel mehrerer Technologien."
 date: "2021-12-12"
 tags: ["metaverse", "storytelling", "content"]
 ---

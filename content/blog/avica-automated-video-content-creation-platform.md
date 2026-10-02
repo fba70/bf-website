@@ -1,6 +1,7 @@
 ---
 title: "AVICA — Automated Video Content Creation Platform"
 description: "Idea and business case for AVICA: automated video content creation, boosted by growing demand across scenarios."
+description_de: "Idee und Business Case für AVICA: automatisierte Erstellung von Videoinhalten, getragen von wachsender Nachfrage in vielen Anwendungsfeldern."
 date: "2022-03-07"
 tags: ["avica", "video", "platform"]
 ---

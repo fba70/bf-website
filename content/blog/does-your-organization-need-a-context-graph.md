@@ -1,6 +1,7 @@
 ---
 title: "Does Your Organization Need a Context Graph?"
 description: "Most modern SaaS platforms are graveyards of disconnected data. A context graph reconnects it."
+description_de: "Die meisten modernen SaaS-Plattformen sind Friedhöfe unverbundener Daten. Ein Context Graph verknüpft sie wieder."
 date: "2026-03-29"
 tags: ["context-graph", "data", "enterprise", "saas"]
 ---

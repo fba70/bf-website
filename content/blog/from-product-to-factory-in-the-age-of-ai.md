@@ -1,6 +1,7 @@
 ---
 title: "From Product to Factory in the Age of AI"
 description: "In the industrial era, Ford's genius wasn't the Model T — it was the assembly line. The same shift is happening with AI."
+description_de: "Im Industriezeitalter lag Fords Genialität nicht im Model T, sondern im Fließband. Mit KI vollzieht sich derselbe Wandel."
 date: "2026-03-03"
 tags: ["ai", "strategy"]
 ---

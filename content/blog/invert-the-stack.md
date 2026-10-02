@@ -1,6 +1,7 @@
 ---
 title: "Invert the Stack: Four Ideas Pointing the Same Way"
 description: "A business world model, the org chart as a routing protocol, the end of manual CRM entry, and the end of hardcoding. Read together, they describe one architecture — and one uncomfortable org change."
+description_de: "Ein Weltmodell des Unternehmens, das Organigramm als Routing-Protokoll, das Ende der manuellen CRM-Pflege und das Ende des Hardcodings. Zusammen gelesen beschreiben sie eine Architektur und eine unbequeme organisatorische Veränderung."
 date: "2026-09-10"
 tags: ["ai-agents", "architecture", "enterprise", "context-graph", "strategy"]
 ---

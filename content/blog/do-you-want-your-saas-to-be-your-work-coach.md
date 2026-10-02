@@ -1,6 +1,7 @@
 ---
 title: "Do You Want Your SaaS to Be Your Work Coach?"
 description: "A thought experiment about the future of B2B sales when your SaaS platform becomes an active coach."
+description_de: "Ein Gedankenexperiment zur Zukunft des B2B-Vertriebs, wenn Ihre SaaS-Plattform zum aktiven Coach wird."
 date: "2026-02-13"
 tags: ["saas", "ai-agents", "sales"]
 ---

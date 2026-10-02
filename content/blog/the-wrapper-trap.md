@@ -1,6 +1,7 @@
 ---
 title: "The \"Wrapper Trap\": Why Most AI Startups Won't Survive the Next Model Update"
 description: "In every gold rush there's a difference between those selling shovels and those digging. The AI gold rush is no different."
+description_de: "In jedem Goldrausch gibt es einen Unterschied zwischen denen, die Schaufeln verkaufen, und denen, die graben. Der KI-Goldrausch ist da keine Ausnahme."
 date: "2026-01-23"
 tags: ["ai", "startups", "strategy"]
 ---

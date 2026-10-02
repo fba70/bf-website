@@ -1,6 +1,7 @@
 ---
 title: "The SaaS Moat is Crumbling: The \"System of Record\" is No Longer King"
 description: "For two decades the holy grail in B2B SaaS was to become the System of Record. That moat is crumbling."
+description_de: "Zwei Jahrzehnte lang war es der heilige Gral im B2B-SaaS, zum System of Record zu werden. Dieser Burggraben bröckelt."
 date: "2026-01-21"
 tags: ["saas", "ai-agents", "strategy"]
 ---

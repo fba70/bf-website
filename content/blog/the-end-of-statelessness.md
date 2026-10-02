@@ -1,6 +1,7 @@
 ---
 title: "The End of Statelessness: Why Agentic AI Demands a New Architecture"
 description: "Agentic AI is a fundamental challenge to the cloud-native, stateless paradigm that has dominated the last decade."
+description_de: "Agentic AI stellt das Cloud-native, zustandslose Paradigma, das das letzte Jahrzehnt dominiert hat, grundlegend infrage."
 date: "2026-01-10"
 tags: ["ai-agents", "architecture"]
 ---

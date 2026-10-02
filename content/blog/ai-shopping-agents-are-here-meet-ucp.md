@@ -1,6 +1,7 @@
 ---
 title: "AI Shopping Agents Are Here: Meet the Universal Commerce Protocol (UCP)"
 description: "In commerce and retail, agents have hit a wall of fragmentation. The Universal Commerce Protocol aims to fix it."
+description_de: "Im Commerce und Handel stoßen Agents an eine Mauer der Fragmentierung. Das Universal Commerce Protocol soll sie einreißen."
 date: "2026-01-12"
 tags: ["ai-agents", "commerce", "protocols"]
 ---

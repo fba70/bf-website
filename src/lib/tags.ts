@@ -1,4 +1,5 @@
 import { getAllPosts, type PostMeta } from "@/lib/blog";
+import type { Locale } from "@/lib/i18n";
 
 // Tags that must not be title-cased word by word.
 const TAG_LABELS: Record<string, string> = {
@@ -23,13 +24,42 @@ const TAG_LABELS: Record<string, string> = {
   "open-source": "Open Source",
 };
 
+// German labels. Tags missing here fall back to the English label.
+const TAG_LABELS_DE: Record<string, string> = {
+  ai: "KI",
+  "ai-agents": "KI-Agenten",
+  "ai-coding": "KI-Coding",
+  "generative-ai": "Generative KI",
+  "r-and-d": "F&E",
+  ecommerce: "E-Commerce",
+  "real-estate": "Immobilien",
+  "future-of-work": "Zukunft der Arbeit",
+  "developer-tools": "Entwickler-Tools",
+  architecture: "Architektur",
+  automation: "Automatisierung",
+  data: "Daten",
+  enterprise: "Unternehmen",
+  infrastructure: "Infrastruktur",
+  models: "Modelle",
+  orchestration: "Orchestrierung",
+  physics: "Physik",
+  platform: "Plattform",
+  protocols: "Protokolle",
+  research: "Forschung",
+  sales: "Vertrieb",
+  science: "Wissenschaft",
+  strategy: "Strategie",
+  telecom: "Telekommunikation",
+};
+
 export type TagInfo = {
   tag: string;
   label: string;
   count: number;
 };
 
-export function tagLabel(tag: string): string {
+export function tagLabel(tag: string, locale: Locale = "en"): string {
+  if (locale === "de" && TAG_LABELS_DE[tag]) return TAG_LABELS_DE[tag];
   const known = TAG_LABELS[tag];
   if (known) return known;
 
@@ -39,7 +69,7 @@ export function tagLabel(tag: string): string {
     .join(" ");
 }
 
-export function getAllTags(): TagInfo[] {
+export function getAllTags(locale: Locale = "en"): TagInfo[] {
   const counts = new Map<string, number>();
 
   for (const post of getAllPosts()) {
@@ -49,7 +79,7 @@ export function getAllTags(): TagInfo[] {
   }
 
   return [...counts.entries()]
-    .map(([tag, count]) => ({ tag, label: tagLabel(tag), count }))
+    .map(([tag, count]) => ({ tag, label: tagLabel(tag, locale), count }))
     .sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag));
 }
 

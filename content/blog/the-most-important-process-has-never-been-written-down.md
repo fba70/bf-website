@@ -1,6 +1,7 @@
 ---
 title: "The Most Important Process in Your Company Has Never Been Written Down"
 description: "The processes that produce revenue are reasoning habits, not workflows. Borrowing Wolfram's computational reducibility to find the pockets inside them — and to let the record assemble itself."
+description_de: "Die Prozesse, die Umsatz erzeugen, sind Denkgewohnheiten und keine Workflows. Mit Wolframs computationaler Reduzierbarkeit finden wir die Inseln darin und lassen die Dokumentation sich selbst zusammenfügen."
 date: "2026-09-17"
 tags: ["ai-agents", "context-graph", "enterprise", "sales", "strategy"]
 ---

@@ -1,6 +1,7 @@
 ---
 title: "How to Create Videos for Your Real Estate"
 description: "If you manage many real estate objects, creating attention-grabbing content at scale is a real problem. Here's an approach."
+description_de: "Wer viele Immobilienobjekte verwaltet, steht vor einem echten Problem: aufmerksamkeitsstarke Inhalte in großem Maßstab zu erstellen. Hier ist ein Ansatz."
 date: "2024-05-30"
 tags: ["video", "real-estate", "content"]
 ---

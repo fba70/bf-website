@@ -1,6 +1,7 @@
 ---
 title: "The Physicist in the Machine: How AI is Rediscovering the Universe"
 description: "Physics has always been a game of finding the source code of reality. AI is changing how we play it."
+description_de: "Die Physik war schon immer ein Spiel um die Suche nach dem Quellcode der Wirklichkeit. KI verändert, wie wir es spielen."
 date: "2026-01-25"
 tags: ["ai", "physics", "science"]
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Video Content Creation Prosumer Platform"
 description: "It's still early days for the next generation of prosumer video tools. A look at what they need to become."
+description_de: "Für die nächste Generation von Prosumer-Videotools ist es noch früh. Ein Blick darauf, was sie werden müssen."
 date: "2024-06-01"
 tags: ["video", "content", "platform"]
 ---

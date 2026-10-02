@@ -1,6 +1,7 @@
 ---
 title: "Your New Customer is an AI Agent"
 description: "Digital content creation is at an inflection point, moving from human-in-the-loop to machine-to-machine."
+description_de: "Die Erstellung digitaler Inhalte steht an einem Wendepunkt: weg vom Human-in-the-Loop, hin zu Machine-to-Machine."
 date: "2026-01-11"
 tags: ["ai-agents", "content", "commerce"]
 ---

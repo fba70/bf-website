@@ -1,6 +1,7 @@
 ---
 title: "SEO is Dead. Long Live BEO (Bot Engine Optimization)"
 description: "Your beautiful hero video means nothing to an AI agent. The era of bot engine optimization is here."
+description_de: "Ihr schönes Hero-Video bedeutet einem AI Agent nichts. Die Ära der Bot Engine Optimization hat begonnen."
 date: "2026-02-19"
 tags: ["ai-agents", "seo", "marketing"]
 ---

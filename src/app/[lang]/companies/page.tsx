@@ -2,15 +2,24 @@ import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
 
 import { companies } from "@/lib/content";
+import { getDictionary } from "@/lib/dictionaries";
+import { pageAlternates, tr } from "@/lib/i18n";
+import { getLocale, type LangParams } from "@/lib/locale-params";
 import { PageShell } from "@/components/page-shell";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-export const metadata: Metadata = {
-  title: "Companies",
-  description: "Companies I've founded and worked with over the years.",
-  alternates: { canonical: "/companies" },
-};
+type Props = { params: Promise<LangParams> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const locale = await getLocale(params);
+  const t = getDictionary(locale).companies;
+  return {
+    title: t.title,
+    description: t.description,
+    alternates: pageAlternates(locale, "/companies"),
+  };
+}
 
 function hostname(url: string): string {
   try {
@@ -20,12 +29,12 @@ function hostname(url: string): string {
   }
 }
 
-export default function CompaniesPage() {
+export default async function CompaniesPage({ params }: Props) {
+  const locale = await getLocale(params);
+  const t = getDictionary(locale).companies;
+
   return (
-    <PageShell
-      title="Companies"
-      lead="Companies I've founded and worked with over the years."
-    >
+    <PageShell title={t.title} lead={t.lead}>
       <div className="grid gap-4 sm:grid-cols-2">
         {companies.map((company, i) => (
           <Card key={`${company.name}-${i}`} className="flex flex-col">
@@ -33,10 +42,10 @@ export default function CompaniesPage() {
               <div className="flex items-start justify-between gap-2">
                 <CardTitle>{company.name}</CardTitle>
                 <Badge variant="secondary" className="shrink-0 font-mono">
-                  {company.from} — {company.to}
+                  {company.from} — {company.to ?? t.present}
                 </Badge>
               </div>
-              <p className="text-sm font-medium text-primary">{company.role}</p>
+              <p className="text-sm font-medium text-primary">{tr(company.role, locale)}</p>
             </CardHeader>
             <CardContent className="mt-auto">
               {company.url ? (

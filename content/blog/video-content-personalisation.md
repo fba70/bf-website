@@ -1,6 +1,7 @@
 ---
 title: "Video Content Personalisation"
 description: "Video content marketing keeps growing — and personalisation is where much of its untapped value sits."
+description_de: "Videomarketing wächst weiter, und in der Personalisierung liegt ein großer Teil seines ungenutzten Werts."
 date: "2024-06-04"
 tags: ["video", "content", "marketing"]
 ---

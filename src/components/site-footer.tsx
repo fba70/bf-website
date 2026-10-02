@@ -2,6 +2,8 @@ import Link from "next/link"
 import { Mail } from "lucide-react"
 import { GithubIcon, LinkedinIcon } from "@/components/icons"
 import { siteConfig } from "@/lib/site"
+import { getDictionary } from "@/lib/dictionaries"
+import type { Locale } from "@/lib/i18n"
 import { Button } from "@/components/ui/button"
 import {
   Tooltip,
@@ -11,7 +13,7 @@ import {
 
 const socials = [
   {
-    label: "Email",
+    label: "email",
     href: `mailto:${siteConfig.email}`,
     icon: Mail,
     external: false,
@@ -30,8 +32,9 @@ const socials = [
   },
 ]
 
-export function SiteFooter() {
+export function SiteFooter({ locale }: { locale: Locale }) {
   const year = new Date().getFullYear()
+  const t = getDictionary(locale).footer
 
   return (
     <footer className="border-t border-border/60">
@@ -42,8 +45,10 @@ export function SiteFooter() {
         </p>
 
         <div className="flex items-center gap-1">
-          <span className="mr-2 text-sm text-muted-foreground">Connect</span>
-          {socials.map(({ label, href, icon: Icon, external }) => (
+          <span className="mr-2 text-sm text-muted-foreground">{t.connect}</span>
+          {socials.map(({ label: rawLabel, href, icon: Icon, external }) => {
+            const label = rawLabel === "email" ? t.email : rawLabel
+            return (
             <Tooltip key={label}>
               <TooltipTrigger asChild>
                 <Button asChild variant="ghost" size="icon">
@@ -60,7 +65,8 @@ export function SiteFooter() {
               </TooltipTrigger>
               <TooltipContent>{label}</TooltipContent>
             </Tooltip>
-          ))}
+            )
+          })}
         </div>
       </div>
     </footer>

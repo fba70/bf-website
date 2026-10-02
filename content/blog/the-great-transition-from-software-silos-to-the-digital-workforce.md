@@ -1,6 +1,7 @@
 ---
 title: "The Great Transition: From Software Silos to the Digital Workforce"
 description: "For two decades the paradigm was clear. We're now standing on the precipice of a fundamental shift in how we build and consume software."
+description_de: "Zwei Jahrzehnte lang war das Paradigma klar. Nun stehen wir am Abgrund eines grundlegenden Wandels darin, wie wir Software bauen und nutzen."
 date: "2026-02-08"
 tags: ["ai-agents", "future-of-work"]
 ---

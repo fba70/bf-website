@@ -1,6 +1,7 @@
 ---
 title: "From Hardcoded to Fluid: Where Software Architecture Goes After the Agent Era"
 description: "Every era of architecture reduced how much of the world we decide in advance. The next step is a tiny constitution humans control — and everything else negotiated by agents."
+description_de: "Jede Architektur-Ära hat verringert, wie viel von der Welt wir im Voraus festlegen. Der nächste Schritt ist eine winzige, von Menschen kontrollierte Verfassung, während alles andere von Agents ausgehandelt wird."
 date: "2026-09-03"
 tags: ["architecture", "ai-agents", "enterprise", "strategy"]
 ---

@@ -14,13 +14,22 @@ export const siteConfig = {
   },
 } as const
 
-export type NavItem = { title: string; href: string }
+export type NavKey =
+  | "home"
+  | "skills"
+  | "projects"
+  | "companies"
+  | "education"
+  | "blog"
+
+// Labels come from the dictionary (src/lib/dictionaries.ts) by `key`.
+export type NavItem = { key: NavKey; href: string }
 
 export const navItems: NavItem[] = [
-  { title: "Home", href: "/" },
-  { title: "Skills", href: "/skills" },
-  { title: "Projects", href: "/projects" },
-  { title: "Companies", href: "/companies" },
-  { title: "Education", href: "/education" },
-  { title: "Blog", href: "/blog" },
+  { key: "home", href: "/" },
+  { key: "skills", href: "/skills" },
+  { key: "projects", href: "/projects" },
+  { key: "companies", href: "/companies" },
+  { key: "education", href: "/education" },
+  { key: "blog", href: "/blog" },
 ]

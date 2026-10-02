@@ -5,12 +5,15 @@ import { ArrowLeft } from "lucide-react";
 
 import { getAllTags, getPostsByTag, tagLabel } from "@/lib/tags";
 import { siteConfig } from "@/lib/site";
+import { getDictionary } from "@/lib/dictionaries";
+import { localePath, pageAlternates } from "@/lib/i18n";
+import { getLocale } from "@/lib/locale-params";
 import { PageShell } from "@/components/page-shell";
 import { PostList } from "@/components/post-list";
 
-type Params = { tag: string };
+type Params = { lang: string; tag: string };
 
-export function generateStaticParams(): Params[] {
+export function generateStaticParams(): Pick<Params, "tag">[] {
   return getAllTags().map((tag) => ({ tag: tag.tag }));
 }
 
@@ -19,22 +22,24 @@ export async function generateMetadata({
 }: {
   params: Promise<Params>;
 }): Promise<Metadata> {
+  const locale = await getLocale(params);
+  const t = getDictionary(locale).tags;
   const { tag } = await params;
   const posts = getPostsByTag(tag);
   if (posts.length === 0) return {};
 
-  const label = tagLabel(tag);
-  const title = `${label} — ${posts.length} ${posts.length === 1 ? "article" : "articles"}`;
+  const label = tagLabel(tag, locale);
+  const path = `/blog/tags/${tag}`;
 
   return {
-    title: `${label} articles`,
-    description: `Every article on ${label} by ${siteConfig.author}, PhD. ${posts.length} ${posts.length === 1 ? "essay" : "essays"}, newest first.`,
-    alternates: { canonical: `/blog/tags/${tag}` },
+    title: t.tagTitle(label),
+    description: t.tagDescription(label, siteConfig.author, posts.length),
+    alternates: pageAlternates(locale, path),
     openGraph: {
       type: "website",
-      title,
-      url: `${siteConfig.url}/blog/tags/${tag}`,
-      description: `Every article on ${label} by ${siteConfig.author}, PhD.`,
+      title: t.tagOgTitle(label, posts.length),
+      url: `${siteConfig.url}${localePath(locale, path)}`,
+      description: t.tagOgDescription(label, siteConfig.author),
     },
   };
 }
@@ -44,21 +49,25 @@ export default async function TagPage({
 }: {
   params: Promise<Params>;
 }) {
+  const locale = await getLocale(params);
+  const dict = getDictionary(locale);
+  const t = dict.tags;
   const { tag } = await params;
   const posts = getPostsByTag(tag);
   if (posts.length === 0) notFound();
 
-  const label = tagLabel(tag);
-  const url = `${siteConfig.url}/blog/tags/${tag}`;
+  const label = tagLabel(tag, locale);
+  const base = siteConfig.url;
+  const url = `${base}${localePath(locale, `/blog/tags/${tag}`)}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "CollectionPage",
-        name: `${label} articles`,
+        name: t.tagTitle(label),
         url,
-        inLanguage: "en",
+        inLanguage: locale,
         about: { "@type": "Thing", name: label },
         mainEntity: {
           "@type": "ItemList",
@@ -74,8 +83,8 @@ export default async function TagPage({
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Blog", item: `${siteConfig.url}/blog` },
-          { "@type": "ListItem", position: 2, name: "Topics", item: `${siteConfig.url}/blog/tags` },
+          { "@type": "ListItem", position: 1, name: dict.blog.title, item: `${base}${localePath(locale, "/blog")}` },
+          { "@type": "ListItem", position: 2, name: t.title, item: `${base}${localePath(locale, "/blog/tags")}` },
           { "@type": "ListItem", position: 3, name: label, item: url },
         ],
       },
@@ -83,10 +92,7 @@ export default async function TagPage({
   };
 
   return (
-    <PageShell
-      title={label}
-      lead={`${posts.length} ${posts.length === 1 ? "article" : "articles"} on ${label}, newest first.`}
-    >
+    <PageShell title={label} lead={t.tagLead(label, posts.length)}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -94,20 +100,20 @@ export default async function TagPage({
 
       <div className="mb-8 flex flex-wrap items-center gap-4 text-sm">
         <Link
-          href="/blog"
+          href={localePath(locale, "/blog")}
           className="inline-flex items-center gap-1 text-muted-foreground transition-colors hover:text-foreground"
         >
-          <ArrowLeft className="h-4 w-4" /> All articles
+          <ArrowLeft className="h-4 w-4" /> {t.allArticles}
         </Link>
         <Link
-          href="/blog/tags"
+          href={localePath(locale, "/blog/tags")}
           className="text-muted-foreground transition-colors hover:text-foreground"
         >
-          All topics
+          {t.allTopics}
         </Link>
       </div>
 
-      <PostList posts={posts} activeTag={tag} />
+      <PostList posts={posts} locale={locale} activeTag={tag} />
     </PageShell>
   );
 }

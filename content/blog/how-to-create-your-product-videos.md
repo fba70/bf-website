@@ -1,6 +1,7 @@
 ---
 title: "How to Create Your Product Videos"
 description: "If your product data lives in e-commerce or PIM platforms, you can automate product video creation."
+description_de: "Liegen Ihre Produktdaten in E-Commerce- oder PIM-Plattformen, können Sie die Erstellung von Produktvideos automatisieren."
 date: "2024-05-24"
 tags: ["video", "ecommerce", "pim"]
 ---

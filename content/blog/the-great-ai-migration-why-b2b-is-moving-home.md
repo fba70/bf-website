@@ -1,6 +1,7 @@
 ---
 title: "The Great AI Migration: Why B2B is Moving \"Home\""
 description: "The era of the monolithic, one-size-fits-all cloud LLM is facing a quiet but definitive revolution."
+description_de: "Das Zeitalter des monolithischen Cloud-LLM für alle steht vor einer stillen, aber endgültigen Revolution."
 date: "2026-02-01"
 tags: ["ai", "b2b", "infrastructure"]
 ---

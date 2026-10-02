@@ -2,11 +2,15 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 
+import { formatDate as formatLocaleDate, formatDateShort as formatLocaleDateShort, type Locale } from "@/lib/i18n";
+
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
 
 export type PostFrontmatter = {
   title: string;
   description: string;
+  /** German translation of `description`. The article body stays English. */
+  description_de?: string;
   date: string; // ISO string, e.g. "2025-06-01"
   updated?: string; // ISO string; falls back to `date` when absent
   tags?: string[];
@@ -65,6 +69,7 @@ export function getPost(slug: string): Post | null {
     slug,
     title: fm.title ?? slug,
     description: fm.description ?? "",
+    description_de: fm.description_de,
     date: fm.date ?? "",
     updated: fm.updated ?? fm.date ?? "",
     tags: fm.tags ?? [],
@@ -85,21 +90,16 @@ export function getAllPosts(): PostMeta[] {
     .map(({ content: _content, ...meta }) => meta);
 }
 
-export function formatDate(date: string): string {
-  if (!date) return "";
-  return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+/** The post description in the given language, English as fallback. */
+export function postDescription(post: PostMeta, locale: Locale): string {
+  return locale === "de" && post.description_de ? post.description_de : post.description;
+}
+
+export function formatDate(date: string, locale: Locale = "en"): string {
+  return formatLocaleDate(date, locale);
 }
 
 /** Compact form for card corners, e.g. "Sep 10, 2026". */
-export function formatDateShort(date: string): string {
-  if (!date) return "";
-  return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
+export function formatDateShort(date: string, locale: Locale = "en"): string {
+  return formatLocaleDateShort(date, locale);
 }

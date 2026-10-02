@@ -1,6 +1,7 @@
 ---
 title: "The Great Equalizer is Coming"
 description: "We're approaching a point where AI agents become functionally indistinguishable in quality and capacity. What then?"
+description_de: "Wir nähern uns einem Punkt, an dem AI Agents in Qualität und Leistungsfähigkeit praktisch nicht mehr zu unterscheiden sind. Was dann?"
 date: "2026-02-26"
 tags: ["ai-agents", "strategy"]
 ---

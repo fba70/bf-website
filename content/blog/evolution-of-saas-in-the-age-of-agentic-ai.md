@@ -1,6 +1,7 @@
 ---
 title: "Evolution of the SaaS in the Age of Agentic AI"
 description: "Falling markets for legacy SaaS and the daily advance of agents and models — an attempt to structure what's happening."
+description_de: "Fallende Kurse bei klassischer SaaS und der tägliche Fortschritt von Agents und Modellen: ein Versuch, das Geschehen zu ordnen."
 date: "2026-02-18"
 tags: ["saas", "ai-agents"]
 ---
