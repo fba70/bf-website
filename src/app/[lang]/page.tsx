@@ -74,6 +74,19 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <>
+      {/* Profile video */}
+      <section>
+        <video
+          src="/FBA_profile.webm"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="block h-auto w-full"
+        />
+      </section>
+
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <script
           type="application/ld+json"
@@ -127,22 +140,7 @@ export default async function HomePage({ params }: Props) {
             </div>
           </div>
         </section>
-      </div>
 
-      {/* Profile video */}
-      <section className="pb-14">
-        <video
-          src="/FBA_profile.webm"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          className="block h-auto w-full"
-        />
-      </section>
-
-      <div className="mx-auto max-w-5xl px-4 sm:px-6">
         {/* Intro */}
         {t.home.about.map((paragraph, i) => (
           <section
